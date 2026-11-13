@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://vy0qkl5154l0"]
+
+[ext_resource type="Texture2D" uid="uid://cx1l53pdkvixi" path="res://sprites/Kath game/personagens/pcQueimado.png" id="1_mpuoo"]
+[ext_resource type="AudioStream" uid="uid://dh1yh4amp3y56" path="res://audio/SFX/microondas.MP3" id="2_tr2p6"]
+[ext_resource type="AudioStream" uid="uid://bj14yus2n5ccn" path="res://audio/SFX/SOM DE EXPLOSÃO - Studio72 (youtube).mp3" id="3_w0aht"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eig8x"]
+atlas = ExtResource("1_mpuoo")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tr2p6"]
+atlas = ExtResource("1_mpuoo")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0aht"]
+atlas = ExtResource("1_mpuoo")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ertp0"]
+atlas = ExtResource("1_mpuoo")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6cwu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eig8x")
+}],
+"loop": true,
+"name": &"Desligado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tr2p6")
+}],
+"loop": true,
+"name": &"Ligado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0aht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ertp0")
+}],
+"loop": true,
+"name": &"Queimado",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x67td"]
+
+[node name="Pc" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w6cwu")
+animation = &"Desligado"
+autoplay = "Desligado"
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+shape = SubResource("CapsuleShape2D_x67td")
+
+[node name="Microondas" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_tr2p6")
+volume_db = 15.0
+
+[node name="Estouro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_w0aht")

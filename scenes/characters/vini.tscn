@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dldkis445v6k7"]
+
+[ext_resource type="Texture2D" uid="uid://pt4ljby5rxlx" path="res://sprites/Kath game/Animacao/Vini idle.png" id="1_f2axg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utqd0"]
+atlas = ExtResource("1_f2axg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_462ps"]
+atlas = ExtResource("1_f2axg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37jow"]
+atlas = ExtResource("1_f2axg")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfxii"]
+atlas = ExtResource("1_f2axg")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_boqgt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utqd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_462ps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37jow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfxii")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f2axg"]
+
+[node name="Vini" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_boqgt")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_f2axg")

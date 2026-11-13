@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://c8vqbqy8hgs0d"]
+
+[ext_resource type="Script" uid="uid://dlhva3ox1kiqt" path="res://scripts/BaixoGame/util/song_item.gd" id="1_y4hgb"]
+[ext_resource type="StyleBox" uid="uid://bgcjq1c1yewg4" path="res://scenes/rooms/focusButtonTittle.tres" id="2_5na5q"]
+[ext_resource type="FontFile" uid="uid://duw11mipxkaeh" path="res://scenes/ui/Pixel Digivolve.otf" id="2_s755v"]
+[ext_resource type="StyleBox" uid="uid://bfj62lpfsoham" path="res://scenes/rooms/hoverButtonTittle.tres" id="3_auljt"]
+[ext_resource type="StyleBox" uid="uid://bnjrppbmipyyi" path="res://scenes/rooms/normalButtonTittle.tres" id="4_fs5x5"]
+[ext_resource type="StyleBox" uid="uid://bfgn34q5ydj4" path="res://scenes/rooms/pressedButtonTittle.tres" id="5_2cv2w"]
+
+[sub_resource type="FontVariation" id="FontVariation_4v267"]
+base_font = ExtResource("2_s755v")
+
+[sub_resource type="Theme" id="Theme_5na5q"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/fonts/font = SubResource("FontVariation_4v267")
+Button/styles/focus = ExtResource("2_5na5q")
+Button/styles/hover = ExtResource("3_auljt")
+Button/styles/normal = ExtResource("4_fs5x5")
+Button/styles/pressed = ExtResource("5_2cv2w")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ny5is"]
+font = ExtResource("2_s755v")
+font_size = 24
+font_color = Color(0.8609882, 0.36065018, 0.3939603, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.448)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gjcdr"]
+font = ExtResource("2_s755v")
+font_size = 18
+font_color = Color(0.2749984, 0.28662747, 0.29834777, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.448)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v4353"]
+font = ExtResource("2_s755v")
+font_color = Color(0.15543893, 0.34595633, 1, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.448)
+
+[node name="SongItem" type="Button"]
+custom_minimum_size = Vector2(0, 90)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_5na5q")
+script = ExtResource("1_y4hgb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="SongName" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_ny5is")
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="Artist" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+label_settings = SubResource("LabelSettings_gjcdr")
+
+[node name="Difficulty" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+label_settings = SubResource("LabelSettings_v4353")
+
+[node name="Duration" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer"]
+visible = false
+layout_mode = 2

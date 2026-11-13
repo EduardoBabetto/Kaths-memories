@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxaa33r6i3f3l"]
+
+[ext_resource type="Script" uid="uid://bfsj1c683e6vd" path="res://scripts/eduardo.gd" id="1_7mspy"]
+[ext_resource type="Texture2D" uid="uid://dpc581wjdddbi" path="res://sprites/Kath game/Animacao/Edu idle.png" id="2_jx4q5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ao07v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_222b3"]
+atlas = ExtResource("2_jx4q5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk3ye"]
+atlas = ExtResource("2_jx4q5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocuc5"]
+atlas = ExtResource("2_jx4q5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc4mh"]
+atlas = ExtResource("2_jx4q5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h20ol"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_222b3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk3ye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocuc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pc4mh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Eduardo" type="CharacterBody2D"]
+script = ExtResource("1_7mspy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_ao07v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h20ol")
+autoplay = "default"

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ccmcr8tccthle"
+path="res://.godot/imported/LUCKHAOS - RAP DO MASTER YI (Hino da criançada qfaz merda com build do Mobafire em Liga das Criança) - L U C K H A O S (youtube).mp3-c7db8de4ea003c305ec47e14858bfa20.mp3str"
+
+[deps]
+
+source_file="res://audio/musica/LUCKHAOS - RAP DO MASTER YI (Hino da criançada qfaz merda com build do Mobafire em Liga das Criança) - L U C K H A O S (youtube).mp3"
+dest_files=["res://.godot/imported/LUCKHAOS - RAP DO MASTER YI (Hino da criançada qfaz merda com build do Mobafire em Liga das Criança) - L U C K H A O S (youtube).mp3-c7db8de4ea003c305ec47e14858bfa20.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

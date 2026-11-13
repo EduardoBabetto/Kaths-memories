@@ -1,0 +1,33 @@
+# Cache e arquivos temporários do Godot
+.godot/
+
+# Arquivos de importação gerados automaticamente
+.import/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configurações locais de editores
+.vscode/
+.idea/
+
+# Builds e executáveis exportados
+/build/
+/export/
+/exports/
+
+# Arquivos compactados e backups
+*.zip
+*.rar
+*.7z
+*.bak
+*.old
+
+*.tpz

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dn61a2n8j3vu6"
+path="res://.godot/imported/⚔️ Sword Scrape Sound Effect  High Quality - Mario Sanchez (youtube).mp3-51bfc2381fa54ed43889cefba16bbe5d.mp3str"
+
+[deps]
+
+source_file="res://audio/SFX/⚔️ Sword Scrape Sound Effect  High Quality - Mario Sanchez (youtube).mp3"
+dest_files=["res://.godot/imported/⚔️ Sword Scrape Sound Effect  High Quality - Mario Sanchez (youtube).mp3-51bfc2381fa54ed43889cefba16bbe5d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

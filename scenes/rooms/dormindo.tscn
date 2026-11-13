@@ -1,0 +1,117 @@
+[gd_scene load_steps=16 format=3 uid="uid://bosplxml18pyq"]
+
+[ext_resource type="Texture2D" uid="uid://b7qux4jadw8s2" path="res://sprites/Kath game/background/black-screen_39.png" id="1_kg1h4"]
+[ext_resource type="Script" uid="uid://cdb8mm7jdbkqj" path="res://scripts/dormindo.gd" id="1_qpkks"]
+[ext_resource type="Texture2D" uid="uid://88xdaqrhigjm" path="res://sprites/Kath game/Dormindo.png" id="2_crg60"]
+[ext_resource type="Texture2D" uid="uid://4ttwx11tapr1" path="res://sprites/Kath game/Acordado.png" id="3_6jtgl"]
+[ext_resource type="Texture2D" uid="uid://dhxp27xp8qqpm" path="res://textures/2d_lights_and_shadows_neutral_point_light.webp" id="3_qpkks"]
+[ext_resource type="FontFile" uid="uid://duw11mipxkaeh" path="res://scenes/ui/Pixel Digivolve.otf" id="4_6jtgl"]
+[ext_resource type="AudioStream" uid="uid://bb37417sp1fp5" path="res://audio/SFX/[Efeito Sonoro] Desenho Animado Roncando e Assobiando - Efeitos Sonoros Produções (youtube).mp3" id="7_6jtgl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mqi0"]
+atlas = ExtResource("3_6jtgl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed75c"]
+atlas = ExtResource("3_6jtgl")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qk2c6"]
+atlas = ExtResource("3_6jtgl")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmbwg"]
+atlas = ExtResource("2_crg60")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe4yo"]
+atlas = ExtResource("2_crg60")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xyid"]
+atlas = ExtResource("2_crg60")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rd53"]
+atlas = ExtResource("2_crg60")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qe4yo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mqi0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed75c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qk2c6")
+}],
+"loop": false,
+"name": &"Acordado",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmbwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qe4yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xyid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rd53")
+}],
+"loop": true,
+"name": &"Dormindo",
+"speed": 5.0
+}]
+
+[node name="Dormindo" type="Node2D"]
+script = ExtResource("1_qpkks")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(140.5, 110.5)
+scale = Vector2(0.15364584, 0.2064815)
+texture = ExtResource("1_kg1h4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(133, 89.99999)
+scale = Vector2(4.4375, 3.2499998)
+sprite_frames = SubResource("SpriteFrames_qe4yo")
+animation = &"Acordado"
+autoplay = "Dormindo"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(145, 122)
+energy = 0.2
+texture = ExtResource("3_qpkks")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -11.0
+offset_top = 166.0
+offset_right = 288.0
+offset_bottom = 196.0
+theme_override_fonts/normal_font = ExtResource("4_6jtgl")
+text = "Pressione qualquer tecla..."
+scroll_active = false
+tab_size = 1
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FadeRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Ronco" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_6jtgl")
+parameters/looping = true

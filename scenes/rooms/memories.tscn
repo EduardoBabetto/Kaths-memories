@@ -1,0 +1,292 @@
+[gd_scene load_steps=33 format=4 uid="uid://ba5rvmormdpjq"]
+
+[ext_resource type="Script" uid="uid://cwox56uepfoqd" path="res://scripts/memories.gd" id="1_2j5xt"]
+[ext_resource type="Texture2D" uid="uid://7ro7ljpybo3j" path="res://sprites/Kath game/background/Background Memorias.png" id="1_gyr1m"]
+[ext_resource type="PackedScene" uid="uid://jhgldc7me1s7" path="res://scenes/characters/lampada.tscn" id="2_54mr0"]
+[ext_resource type="TileSet" uid="uid://de51j3qxemvf8" path="res://tiles/Terrain.tres" id="3_gyr1m"]
+[ext_resource type="TileSet" uid="uid://dwxhyi0nc2gb2" path="res://tiles/decoretion.tres" id="4_54mr0"]
+[ext_resource type="PackedScene" uid="uid://cxm8rcxlvyn70" path="res://scenes/characters/dialog_box.tscn" id="5_hdvuc"]
+[ext_resource type="PackedScene" uid="uid://b418g8tqa74jj" path="res://scenes/characters/porta.tscn" id="6_oyf4o"]
+[ext_resource type="PackedScene" uid="uid://bwmimtv4h45ma" path="res://scenes/characters/player.tscn" id="7_bquot"]
+[ext_resource type="PackedScene" uid="uid://b7tjb4krwtjfr" path="res://scenes/characters/level_end.tscn" id="8_54mr0"]
+[ext_resource type="PackedScene" uid="uid://co38t0hxh568o" path="res://scenes/characters/interruptor.tscn" id="9_hdvuc"]
+[ext_resource type="PackedScene" uid="uid://btpqj4y1niqqt" path="res://scenes/characters/objeto_interativo.tscn" id="10_d1o1w"]
+[ext_resource type="Texture2D" uid="uid://bch732spwsx1i" path="res://sprites/Kath game/New Piskel.png" id="11_d8pbc"]
+[ext_resource type="Script" uid="uid://d1pnh6k7gd766" path="res://scripts/psyduck_interativo.gd" id="11_dnu8r"]
+[ext_resource type="Script" uid="uid://k7eu1x7acjxx" path="res://scripts/Labuziggs_interativo.gd" id="12_2j5xt"]
+[ext_resource type="AudioStream" uid="uid://dkp7gaytjqrdx" path="res://audio/SFX/Quack.mp3" id="12_6ppf0"]
+[ext_resource type="Script" uid="uid://by2p3b7ani8lf" path="res://scripts/Diluc_interativo.gd" id="13_4k1ev"]
+[ext_resource type="Script" uid="uid://dt6quxc7nu3vh" path="res://scripts/Baixo_interativo.gd" id="14_jfmx6"]
+[ext_resource type="Script" uid="uid://c13w5yjohi7qj" path="res://scripts/Foto_interativa.gd" id="15_1vqx2"]
+[ext_resource type="PackedScene" uid="uid://7fmrsk47vysc" path="res://scenes/characters/shaco_box.tscn" id="15_dnu8r"]
+[ext_resource type="Script" uid="uid://blbb3fe4b0ngt" path="res://scripts/Shaco_dialogo.gd" id="16_4k1ev"]
+[ext_resource type="PackedScene" uid="uid://xje88j7md2mt" path="res://scenes/rooms/72h.tscn" id="16_a64l3"]
+[ext_resource type="PackedScene" uid="uid://dqak8mqpk3sfw" path="res://scenes/rooms/diluc_minigame.tscn" id="16_i5pw5"]
+[ext_resource type="PackedScene" uid="uid://jw08uir7320k" path="res://scenes/rooms/kath_baixo.tscn" id="20_1vqx2"]
+[ext_resource type="PackedScene" uid="uid://ba5fpev6jjrdb" path="res://scenes/characters/labuziggs.tscn" id="20_36163"]
+[ext_resource type="PackedScene" uid="uid://dvay8dc2u7kn0" path="res://scenes/ui/minigame_manager.tscn" id="21_a64l3"]
+[ext_resource type="AudioStream" uid="uid://dcykfmua3ccif" path="res://audio/musica/Eric Skiff - Underclocked ♫ NO COPYRIGHT 8-bit Music + Background - Free Music (youtube).mp3" id="22_n8hnx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_frrsy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed54e"]
+atlas = ExtResource("11_d8pbc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j63ag"]
+atlas = ExtResource("11_d8pbc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jahdw"]
+atlas = ExtResource("11_d8pbc")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aduss"]
+atlas = ExtResource("11_d8pbc")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rixs4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed54e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j63ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jahdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aduss")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Memories" type="Node2D"]
+script = ExtResource("1_2j5xt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(143.74998, 97)
+scale = Vector2(0.7247429, 0.69424456)
+texture = ExtResource("1_gyr1m")
+
+[node name="lampada" parent="." instance=ExtResource("2_54mr0")]
+position = Vector2(143, 16)
+
+[node name="Tiles" type="Node2D" parent="."]
+position = Vector2(147, 16)
+
+[node name="terrain" type="TileMapLayer" parent="Tiles"]
+z_index = 1
+position = Vector2(-140, -34)
+scale = Vector2(1.0288506, 1.0076371)
+tile_map_data = PackedByteArray("AAAMAAsABQAKAAQAABD//w0ABQACAAMAAAAAAA0ABQADAAcAAAABAA0ABQADAAMAAAACAA0ABQADAAcAAAADAA0ABQADAAcAAAAFAA0ABQADAAcAAAAGAA0ABQADAAcAAAAHAA0ABQADAAMAAAAIAA0ABQADAAcAAAAJAA0ABQADAAcAAAAKAA0ABQADAAMAAAALAA0ABQADAAcAAAAMAA0ABQADAAMAAAANAA0ABQADAAcAAAAOAA0ABQADAAMAAAAPAA0ABQADAAcAAAAQAA0ABQADAAcAAAARAA0ABQAEAAMAAAAEAA0ABQADAAMAAAA=")
+tile_set = ExtResource("3_gyr1m")
+
+[node name="Decoration" type="TileMapLayer" parent="Tiles"]
+position = Vector2(-137, -16)
+tile_map_data = PackedByteArray("AAADAAgABAAAAAMAAAANAAoABAAFAAQAAAAIAAoABAADAAAAAAAKAAgABAAHAAEAAAA=")
+tile_set = ExtResource("4_54mr0")
+
+[node name="porta" parent="." instance=ExtResource("6_oyf4o")]
+position = Vector2(21, 174)
+
+[node name="player" parent="." instance=ExtResource("7_bquot")]
+position = Vector2(53, 173)
+
+[node name="proxFase" parent="." instance=ExtResource("6_oyf4o")]
+position = Vector2(268, 173)
+
+[node name="LevelEnd" parent="." instance=ExtResource("8_54mr0")]
+position = Vector2(19, 171)
+next_level = "main"
+
+[node name="interruptor" parent="." instance=ExtResource("9_hdvuc")]
+position = Vector2(44, 167)
+
+[node name="Objeto_interativo" type="Node2D" parent="."]
+position = Vector2(266, 168)
+
+[node name="psyduck_interativo" type="Node2D" parent="Objeto_interativo"]
+position = Vector2(-123, 3)
+script = ExtResource("11_dnu8r")
+
+[node name="Area2D" type="Area2D" parent="Objeto_interativo/psyduck_interativo"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objeto_interativo/psyduck_interativo/Area2D"]
+shape = SubResource("CircleShape2D_frrsy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Objeto_interativo/psyduck_interativo"]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_rixs4")
+autoplay = "default"
+
+[node name="Quack" type="AudioStreamPlayer" parent="Objeto_interativo/psyduck_interativo"]
+stream = ExtResource("12_6ppf0")
+
+[node name="Labuziggs_interativo" type="Node2D" parent="Objeto_interativo" groups=["Labuziggs_interativo"]]
+position = Vector2(-170, 8)
+script = ExtResource("12_2j5xt")
+
+[node name="Area2D" type="Area2D" parent="Objeto_interativo/Labuziggs_interativo"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objeto_interativo/Labuziggs_interativo/Area2D"]
+shape = SubResource("CircleShape2D_frrsy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Objeto_interativo/Labuziggs_interativo"]
+sprite_frames = SubResource("SpriteFrames_rixs4")
+autoplay = "default"
+
+[node name="Diluc_interativo" parent="Objeto_interativo" node_paths=PackedStringArray("manager") instance=ExtResource("10_d1o1w")]
+position = Vector2(-201, -15)
+script = ExtResource("13_4k1ev")
+dialog_data = [{
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "MINHA ESPADA DO DILUC!",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "Faz tempo que não uso ela,",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "Vo bater em uns...",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "fANTAMAS BOBÕES!",
+"text_color": Color(1, 0, 0, 1)
+}]
+minigame_scene = ExtResource("16_i5pw5")
+manager = NodePath("../../MinigameManager")
+
+[node name="Baixo_interativo" parent="Objeto_interativo" node_paths=PackedStringArray("manager") instance=ExtResource("10_d1o1w")]
+position = Vector2(-91, -6)
+script = ExtResource("14_jfmx6")
+dialog_data = [{
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "Meu baixo...",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "ELE É MUITO FODA!",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "Se liga nesse solo!!",
+"text_color": Color(1, 0, 0, 1)
+}]
+minigame_scene = ExtResource("20_1vqx2")
+manager = NodePath("../../MinigameManager")
+
+[node name="Foto_interativo" parent="Objeto_interativo" instance=ExtResource("10_d1o1w")]
+position = Vector2(-40, -3)
+script = ExtResource("15_1vqx2")
+dialog_data = [{
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 0,
+"text": "Eu lembro dessa foto!",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 0,
+"text": "A Eve ta tão fofinha nela...",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 0,
+"text": "Vai virar capa da minha playlist!",
+"text_color": Color(1, 0, 0, 1)
+}]
+
+[node name="Shaco_dialogo" parent="Objeto_interativo" instance=ExtResource("10_d1o1w")]
+position = Vector2(-63, 8)
+script = ExtResource("16_4k1ev")
+dialog_data = [{
+"animation": "ShacoBox",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Shaco Box",
+"side": 0,
+"text": "Porque está tão sério?",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "Me caguei.",
+"text_color": Color(1, 0, 0, 1)
+}]
+
+[node name="ShacoBox" parent="." instance=ExtResource("15_dnu8r")]
+position = Vector2(203, 175)
+
+[node name="Labuziggs" parent="." instance=ExtResource("20_36163")]
+position = Vector2(96, 179)
+
+[node name="dialog_box" parent="." instance=ExtResource("5_hdvuc")]
+
+[node name="72h" parent="." instance=ExtResource("16_a64l3")]
+
+[node name="MinigameManager" parent="." instance=ExtResource("21_a64l3")]
+
+[node name="LevelEnd2" parent="." instance=ExtResource("8_54mr0")]
+position = Vector2(266, 168)
+next_level = "final"
+
+[node name="SoundTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_n8hnx")
+volume_db = -2.862
+parameters/looping = true
+
+[connection signal="body_exited" from="LevelEnd" to="LevelEnd" method="_on_body_exited"]
+[connection signal="toggled" from="interruptor" to="lampada" method="_on_interruptor_toggled"]
+[connection signal="body_entered" from="Objeto_interativo/psyduck_interativo/Area2D" to="Objeto_interativo/psyduck_interativo" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Objeto_interativo/psyduck_interativo/Area2D" to="Objeto_interativo/psyduck_interativo" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Objeto_interativo/Labuziggs_interativo/Area2D" to="Objeto_interativo/Labuziggs_interativo" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Objeto_interativo/Labuziggs_interativo/Area2D" to="Objeto_interativo/Labuziggs_interativo" method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="LevelEnd2" to="LevelEnd2" method="_on_body_exited"]

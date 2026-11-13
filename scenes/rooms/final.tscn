@@ -1,0 +1,165 @@
+[gd_scene load_steps=30 format=4 uid="uid://j16av1y01ct8"]
+
+[ext_resource type="Texture2D" uid="uid://dyut5fy0br5e6" path="res://sprites/Kath game/background/Background final-1.png.png" id="1_jqgir"]
+[ext_resource type="Script" uid="uid://ylrecvx2lnqh" path="res://scripts/final.gd" id="1_wcv10"]
+[ext_resource type="PackedScene" uid="uid://cxaa33r6i3f3l" path="res://scenes/characters/eduardo.tscn" id="2_tmagy"]
+[ext_resource type="PackedScene" uid="uid://du5f77fjfewa1" path="res://scenes/characters/mamae.tscn" id="3_c7xlh"]
+[ext_resource type="PackedScene" uid="uid://bwmimtv4h45ma" path="res://scenes/characters/player.tscn" id="4_r3mpi"]
+[ext_resource type="PackedScene" uid="uid://b418g8tqa74jj" path="res://scenes/characters/porta.tscn" id="5_1q4lr"]
+[ext_resource type="PackedScene" uid="uid://gh0wxbt6614p" path="res://scenes/characters/joao.tscn" id="6_dj5of"]
+[ext_resource type="TileSet" uid="uid://de51j3qxemvf8" path="res://tiles/Terrain.tres" id="6_sb47i"]
+[ext_resource type="TileSet" uid="uid://dwxhyi0nc2gb2" path="res://tiles/decoretion.tres" id="7_g7k3b"]
+[ext_resource type="PackedScene" uid="uid://bddnj8qyxtq2a" path="res://scenes/characters/mesa_bolo.tscn" id="8_1q4lr"]
+[ext_resource type="PackedScene" uid="uid://ceu8jmlb1npbf" path="res://scenes/characters/painel.tscn" id="9_g7k3b"]
+[ext_resource type="PackedScene" uid="uid://q4v2qjshscvb" path="res://scenes/characters/nik.tscn" id="9_yb5io"]
+[ext_resource type="Script" uid="uid://d3ufwuqde3ck" path="res://scripts/mesa_bolo.gd" id="10_me444"]
+[ext_resource type="PackedScene" uid="uid://cxm8rcxlvyn70" path="res://scenes/characters/dialog_box.tscn" id="10_xccvd"]
+[ext_resource type="PackedScene" uid="uid://b77ygwrx4se68" path="res://scenes/characters/vela.tscn" id="11_xccvd"]
+[ext_resource type="PackedScene" uid="uid://jhgldc7me1s7" path="res://scenes/characters/lampada.tscn" id="12_qyeht"]
+[ext_resource type="Script" uid="uid://dn2vu6jt3os8c" path="res://scripts/vela.gd" id="12_rjlmr"]
+[ext_resource type="PackedScene" uid="uid://co38t0hxh568o" path="res://scenes/characters/interruptor.tscn" id="13_2sgjo"]
+[ext_resource type="PackedScene" uid="uid://cdlfbu347sr6w" path="res://scenes/characters/node_2d.tscn" id="14_2sgjo"]
+[ext_resource type="PackedScene" uid="uid://btpqj4y1niqqt" path="res://scenes/characters/objeto_interativo.tscn" id="15_l8lqy"]
+[ext_resource type="PackedScene" uid="uid://p8cbvnkt003r" path="res://scenes/characters/carta.tscn" id="16_vcny7"]
+[ext_resource type="Texture2D" uid="uid://dhxp27xp8qqpm" path="res://textures/2d_lights_and_shadows_neutral_point_light.webp" id="18_k78ri"]
+[ext_resource type="Script" uid="uid://meh7pp2bf80g" path="res://scripts/eve.gd" id="18_me444"]
+[ext_resource type="Script" uid="uid://rxcoraxdb34b" path="res://scripts/objeto_interativo_Bolo.gd" id="19_hmbt0"]
+[ext_resource type="Script" uid="uid://dajl3lo44len1" path="res://scripts/objeto_interativo_Eve.gd" id="20_n1alf"]
+[ext_resource type="Script" uid="uid://d0w1yq0efrjf0" path="res://scripts/objeto_interativo_Vela.gd" id="21_xfs4u"]
+[ext_resource type="PackedScene" uid="uid://b7tjb4krwtjfr" path="res://scenes/characters/level_end.tscn" id="25_hmbt0"]
+[ext_resource type="AudioStream" uid="uid://cri7uxht0mob7" path="res://audio/SFX/confete.mp3" id="26_n1alf"]
+[ext_resource type="AudioStream" uid="uid://rwnoeh2hxfsp" path="res://audio/musica/final.MP3" id="27_xfs4u"]
+
+[node name="final" type="Node2D"]
+scale = Vector2(1, 0.9968657)
+script = ExtResource("1_wcv10")
+
+[node name="Carta" parent="." instance=ExtResource("16_vcny7")]
+
+[node name="Escuridao" type="CanvasModulate" parent="."]
+color = Color(0.007843138, 0.007843138, 0.019607844, 1)
+
+[node name="Bg" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Bg"]
+position = Vector2(143.5, 103.5)
+scale = Vector2(0.7225, 0.7517985)
+texture = ExtResource("1_jqgir")
+
+[node name="ColorRect" type="ColorRect" parent="Bg/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -198.61592
+offset_top = -137.66986
+offset_right = -198.61592
+offset_bottom = -137.66986
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6509804)
+
+[node name="Eduardo" parent="." instance=ExtResource("2_tmagy")]
+z_index = 2
+position = Vector2(166, 190.59738)
+
+[node name="Joao" parent="." instance=ExtResource("6_dj5of")]
+position = Vector2(197, 191.60054)
+
+[node name="Mamãe" parent="." instance=ExtResource("3_c7xlh")]
+z_index = 2
+position = Vector2(177, 191)
+
+[node name="player" parent="." instance=ExtResource("4_r3mpi")]
+position = Vector2(61, 189.59425)
+
+[node name="Nik" parent="." instance=ExtResource("9_yb5io")]
+position = Vector2(187, 191.60054)
+
+[node name="porta" parent="." instance=ExtResource("5_1q4lr")]
+position = Vector2(37, 191)
+
+[node name="Tiles" type="Node2D" parent="."]
+position = Vector2(147, 16)
+
+[node name="terrain" type="TileMapLayer" parent="Tiles"]
+z_index = 1
+position = Vector2(-140, -34)
+tile_map_data = PackedByteArray("AAAMAAsABQAKAAQAABD//w4ABQACAAMAAAAAAA4ABQADAAcAAAABAA4ABQADAAMAAAACAA4ABQADAAcAAAADAA4ABQADAAcAAAAEAA4ABQADAAMAAAAFAA4ABQADAAcAAAAGAA4ABQADAAcAAAAHAA4ABQADAAMAAAAIAA4ABQADAAcAAAAJAA4ABQADAAcAAAAKAA4ABQADAAMAAAALAA4ABQADAAcAAAAMAA4ABQADAAMAAAANAA4ABQADAAcAAAAOAA4ABQADAAMAAAAPAA4ABQADAAcAAAAQAA4ABQADAAcAAAARAA4ABQAEAAMAAAA=")
+tile_set = ExtResource("6_sb47i")
+
+[node name="Decoration" type="TileMapLayer" parent="Tiles"]
+position = Vector2(-139, -16)
+tile_set = ExtResource("7_g7k3b")
+
+[node name="MesaBolo" parent="." instance=ExtResource("8_1q4lr")]
+z_index = 3
+position = Vector2(153, 196)
+script = ExtResource("10_me444")
+
+[node name="Painel" parent="." instance=ExtResource("9_g7k3b")]
+position = Vector2(165, 147)
+scale = Vector2(1.5929129, 1.8770803)
+
+[node name="dialog_box" parent="." instance=ExtResource("10_xccvd")]
+
+[node name="Vela" parent="." instance=ExtResource("11_xccvd")]
+z_index = 2
+position = Vector2(147, 180)
+script = ExtResource("12_rjlmr")
+
+[node name="lampada" parent="." instance=ExtResource("12_qyeht")]
+position = Vector2(101, 7.0220094)
+
+[node name="interruptor" parent="." node_paths=PackedStringArray("lampada") groups=["lampadas"] instance=ExtResource("13_2sgjo")]
+visibility_layer = 2
+position = Vector2(235, 178)
+lampada = NodePath("../lampada")
+
+[node name="evee" parent="." instance=ExtResource("14_2sgjo")]
+position = Vector2(106, 190)
+script = ExtResource("18_me444")
+
+[node name="ObjetosInterativos" type="Node2D" parent="."]
+
+[node name="ObjetoInterativoBolo" parent="ObjetosInterativos" node_paths=PackedStringArray("alvo", "vela_para_sumir") instance=ExtResource("15_l8lqy")]
+position = Vector2(144, 193)
+script = ExtResource("19_hmbt0")
+tipo_interacao = 2
+alvo = NodePath("../../MesaBolo")
+vela_para_sumir = NodePath("../../Vela")
+
+[node name="ObjetoInterativoEve" parent="ObjetosInterativos" node_paths=PackedStringArray("alvo") instance=ExtResource("15_l8lqy")]
+position = Vector2(106, 190)
+script = ExtResource("20_n1alf")
+tipo_interacao = 3
+alvo = NodePath("../../evee")
+
+[node name="ObjetoInterativoVela" parent="ObjetosInterativos" node_paths=PackedStringArray("alvo") instance=ExtResource("15_l8lqy")]
+position = Vector2(145, 182)
+script = ExtResource("21_xfs4u")
+tipo_interacao = 1
+alvo = NodePath("../../Vela")
+
+[node name="LuzVela" type="PointLight2D" parent="."]
+position = Vector2(143, 182)
+texture = ExtResource("18_k78ri")
+texture_scale = 0.1
+
+[node name="LevelEnd" parent="." instance=ExtResource("25_hmbt0")]
+position = Vector2(35, 185.58167)
+next_level = "memories"
+
+[node name="Confete" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_n1alf")
+
+[node name="SoundTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_xfs4u")
+parameters/looping = true
+
+[connection signal="body_exited" from="LevelEnd" to="LevelEnd" method="_on_body_exited"]

@@ -1,0 +1,320 @@
+[gd_scene load_steps=17 format=3 uid="uid://c28oi0j1irvxe"]
+
+[ext_resource type="Texture2D" uid="uid://drsxpcv6an0s1" path="res://sprites/Kath game/background/Bg tittleScreen-1.png (1).png" id="1_igxwt"]
+[ext_resource type="Script" uid="uid://blc5ehuimuyfa" path="res://scripts/title_screen.gd" id="1_t6oky"]
+[ext_resource type="Texture2D" uid="uid://7dxrqm414nrv" path="res://sprites/Kath game/Game logo-1.png.png" id="2_dx60x"]
+[ext_resource type="Theme" uid="uid://ckynrbrjn01uc" path="res://scenes/rooms/DefaultButtons.tres" id="3_bvhhv"]
+[ext_resource type="StyleBox" uid="uid://bgcjq1c1yewg4" path="res://scenes/rooms/focusButtonTittle.tres" id="4_t6oky"]
+[ext_resource type="StyleBox" uid="uid://bfj62lpfsoham" path="res://scenes/rooms/hoverButtonTittle.tres" id="5_25jiq"]
+[ext_resource type="StyleBox" uid="uid://bnjrppbmipyyi" path="res://scenes/rooms/normalButtonTittle.tres" id="6_tdoph"]
+[ext_resource type="StyleBox" uid="uid://bfgn34q5ydj4" path="res://scenes/rooms/pressedButtonTittle.tres" id="7_rq5an"]
+[ext_resource type="Texture2D" uid="uid://bmk8whbj66rfc" path="res://sprites/Kath game/personagens/Kath tittleScreen.png" id="9_t6oky"]
+[ext_resource type="FontFile" uid="uid://duw11mipxkaeh" path="res://scenes/ui/Pixel Digivolve.otf" id="10_rq5an"]
+[ext_resource type="AudioStream" uid="uid://c0ha35tanuhyn" path="res://audio/musica/Kevin MacLeod - Pixelland ♫ NO COPYRIGHT 8-bit Music - Free Music (youtube).mp3" id="11_tdoph"]
+
+[sub_resource type="Theme" id="Theme_2uq1d"]
+Button/fonts/font = ExtResource("10_rq5an")
+Button/styles/focus = ExtResource("4_t6oky")
+Button/styles/hover = ExtResource("5_25jiq")
+Button/styles/normal = ExtResource("6_tdoph")
+Button/styles/pressed = ExtResource("7_rq5an")
+
+[sub_resource type="Theme" id="Theme_mbdfe"]
+Button/fonts/font = ExtResource("10_rq5an")
+Button/styles/focus = ExtResource("4_t6oky")
+Button/styles/hover = ExtResource("5_25jiq")
+Button/styles/normal = ExtResource("6_tdoph")
+Button/styles/pressed = ExtResource("7_rq5an")
+
+[sub_resource type="Animation" id="Animation_25jiq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/HBoxContainer/mochi:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t6oky"]
+resource_name = "Reveal"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.19999999, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 0.9),
+"transitions": PackedFloat32Array(0.68302023, 1),
+"update": 0,
+"values": [Vector2(-500, 0), Vector2(3, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/HBoxContainer/mochi:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.26666665, 0.91999996, 1.1999999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tdoph"]
+_data = {
+&"RESET": SubResource("Animation_25jiq"),
+&"Reveal": SubResource("Animation_t6oky")
+}
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6oky")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 288.0
+offset_bottom = 208.0
+texture = ExtResource("1_igxwt")
+expand_mode = 2
+
+[node name="Controles" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Controles"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Controles/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8862745)
+
+[node name="Mov" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 147.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "Movimentação"
+
+[node name="W" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 60.999996
+offset_top = 47.000004
+offset_right = 77.0
+offset_bottom = 70.0
+scale = Vector2(2.4366057, 1.8061638)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "W"
+
+[node name="D" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 91.0
+offset_top = 72.00001
+offset_right = 107.0
+offset_bottom = 95.00001
+scale = Vector2(2.494335, 1.5473052)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "D"
+
+[node name="S" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 63.0
+offset_top = 71.000015
+offset_right = 79.0
+offset_bottom = 94.000015
+scale = Vector2(2.4366057, 1.8061638)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "S"
+
+[node name="A" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 32.999985
+offset_top = 71.0
+offset_right = 48.999985
+offset_bottom = 94.0
+scale = Vector2(2.4366057, 1.8061638)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "A"
+
+[node name="Ataque" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 288.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "Ataque"
+
+[node name="J" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 201.0
+offset_top = 81.0
+offset_right = 217.0
+offset_bottom = 104.0
+scale = Vector2(2.4366057, 1.8061638)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "J"
+
+[node name="Selecionar" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 20.0
+offset_top = 134.0
+offset_right = 147.0
+offset_bottom = 157.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "Selecionar"
+
+[node name="Space" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 28.0
+offset_top = 173.0
+offset_right = 82.0
+offset_bottom = 196.0
+scale = Vector2(0.8477819, 1.083896)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "Space"
+
+[node name="E" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 73.0
+offset_top = 174.0
+offset_right = 200.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "/ E"
+
+[node name="Menu" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 154.0
+offset_top = 123.0
+offset_right = 281.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "Menu"
+
+[node name="ESC" type="Label" parent="Controles/CanvasLayer"]
+offset_left = 159.0
+offset_top = 143.0
+offset_right = 286.0
+offset_bottom = 186.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("10_rq5an")
+text = "ESC
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="game_logo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_dx60x")
+
+[node name="Start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_bvhhv")
+text = "Start"
+
+[node name="Credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_2uq1d")
+text = "Controle"
+
+[node name="Quit_Btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_mbdfe")
+text = "Quit"
+
+[node name="mochi" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_t6oky")
+expand_mode = 2
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_tdoph")
+}
+autoplay = "Reveal"
+
+[node name="SoundTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_tdoph")
+parameters/looping = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Credits_btn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit_Btn" to="." method="_on_quit_btn_pressed"]

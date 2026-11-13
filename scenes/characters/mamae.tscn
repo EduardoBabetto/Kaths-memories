@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://du5f77fjfewa1"]
+
+[ext_resource type="Texture2D" uid="uid://cosvq0vvrslkt" path="res://sprites/Kath game/Animacao/Mamãe Kath.png" id="1_uo3q7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47035"]
+atlas = ExtResource("1_uo3q7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmvsi"]
+atlas = ExtResource("1_uo3q7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_874d4"]
+atlas = ExtResource("1_uo3q7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qaud"]
+atlas = ExtResource("1_uo3q7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qf2p5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47035")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmvsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_874d4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qaud")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xo6g"]
+
+[node name="Mamae" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qf2p5")
+autoplay = "default"
+frame_progress = 0.7516704
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4xo6g")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://jhgldc7me1s7"]
+
+[ext_resource type="Script" uid="uid://xc8wcrxdl17s" path="res://scripts/lampada.gd" id="1_f4ge0"]
+[ext_resource type="Texture2D" uid="uid://c18yh4wp0e6fg" path="res://sprites/Kath game/personagens/Lampada-1.png.png" id="2_5rb8d"]
+[ext_resource type="Texture2D" uid="uid://dhxp27xp8qqpm" path="res://textures/2d_lights_and_shadows_neutral_point_light.webp" id="2_xqr1e"]
+
+[node name="lampada" type="Node2D" groups=["lampadas"]]
+script = ExtResource("1_f4ge0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5rb8d")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.40832916, 0.40832955, 0.40832937, 1)
+energy = 0.0
+texture = ExtResource("2_xqr1e")
+texture_scale = 2.0
+height = 2.0

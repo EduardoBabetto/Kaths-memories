@@ -1,0 +1,82 @@
+[gd_scene load_steps=14 format=3 uid="uid://7fmrsk47vysc"]
+
+[ext_resource type="Texture2D" uid="uid://ccu0m12g6ihnu" path="res://sprites/Kath game/personagens/Shaco box.png" id="1_m6xvt"]
+[ext_resource type="Script" uid="uid://cf4xu1so2yhgd" path="res://scripts/shaco_box.gd" id="1_xxgyi"]
+[ext_resource type="AudioStream" uid="uid://drirwdaf4onvu" path="res://audio/SFX/Shaco.mp3" id="3_xxgyi"]
+[ext_resource type="AudioStream" uid="uid://c2aj2ur8fs22p" path="res://audio/SFX/Caixa de musica.mp3" id="4_ss3jv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6u73"]
+atlas = ExtResource("1_m6xvt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khn26"]
+atlas = ExtResource("1_m6xvt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omede"]
+atlas = ExtResource("1_m6xvt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85pq6"]
+atlas = ExtResource("1_m6xvt")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcg2e"]
+atlas = ExtResource("1_m6xvt")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33bkd"]
+atlas = ExtResource("1_m6xvt")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chivo"]
+atlas = ExtResource("1_m6xvt")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxuji"]
+atlas = ExtResource("1_m6xvt")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7jqdt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6u73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khn26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omede")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85pq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcg2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33bkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chivo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxuji")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ShacoBox" type="Node2D"]
+script = ExtResource("1_xxgyi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7jqdt")
+
+[node name="Shaco" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xxgyi")
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ss3jv")

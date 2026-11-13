@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://bga1w61gv5u56"]
+
+[ext_resource type="Script" uid="uid://wwd0658xl030" path="res://scripts/Loading.gd" id="1_hn34x"]
+[ext_resource type="Texture2D" uid="uid://djisf8qx26jls" path="res://sprites/Kath game/Animacao/Kath face.png" id="2_54fpb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtlbw"]
+atlas = ExtResource("2_54fpb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttm5k"]
+atlas = ExtResource("2_54fpb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nw1rp"]
+atlas = ExtResource("2_54fpb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv6al"]
+atlas = ExtResource("2_54fpb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lhtki"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtlbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttm5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nw1rp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv6al")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Loading" type="CanvasLayer"]
+script = ExtResource("1_hn34x")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="LoadingText" type="Label" parent="."]
+visible = false
+offset_left = 122.0
+offset_top = 76.0
+offset_right = 239.0
+offset_bottom = 105.0
+text = "Carregando..."
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(99.00001, 94)
+scale = Vector2(1.46875, 1.34375)
+sprite_frames = SubResource("SpriteFrames_lhtki")
+autoplay = "default"

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceu8jmlb1npbf"]
+
+[ext_resource type="Texture2D" uid="uid://b1ujcyr7fstbj" path="res://sprites/Kath game/personagens/Painel-1.png.png" id="1_gmrt6"]
+
+[node name="Painel" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gmrt6")

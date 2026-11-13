@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqoytukq3dlar"
+path="res://.godot/imported/CPM22 - Um Minuto Para O Fim Do Mundo -  Extra - CPM22VEVO (youtube).mp3-1ad95573f050cdfc940331eb49581fda.mp3str"
+
+[deps]
+
+source_file="res://audio/musica/CPM22 - Um Minuto Para O Fim Do Mundo -  Extra - CPM22VEVO (youtube).mp3"
+dest_files=["res://.godot/imported/CPM22 - Um Minuto Para O Fim Do Mundo -  Extra - CPM22VEVO (youtube).mp3-1ad95573f050cdfc940331eb49581fda.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

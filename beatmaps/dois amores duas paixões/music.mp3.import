@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6qlc48uivcx3"
+path="res://.godot/imported/music.mp3-f43743234efeb8ab1f7c5bf31ce9d6f2.mp3str"
+
+[deps]
+
+source_file="res://beatmaps/dois amores duas paixões/music.mp3"
+dest_files=["res://.godot/imported/music.mp3-f43743234efeb8ab1f7c5bf31ce9d6f2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

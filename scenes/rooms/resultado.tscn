@@ -1,0 +1,1001 @@
+[gd_scene load_steps=11 format=3 uid="uid://cwfi0px08kapk"]
+
+[ext_resource type="FontFile" uid="uid://duw11mipxkaeh" path="res://scenes/ui/Pixel Digivolve.otf" id="1_6ttvc"]
+[ext_resource type="Texture2D" uid="uid://eneb573esxli" path="res://sprites/Kath game/personagens/Rank.png" id="2_ltj21"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ltj21"]
+bg_color = Color(0.3254902, 0.8627451, 0.5019608, 0.7137255)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_abjde"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn3yc"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ament"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6ttvc"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+color = Color(0.27058825, 1, 0.27058825, 1)
+
+[sub_resource type="Animation" id="Animation_pn3yc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarkOverlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.9019608)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/Header/Panel:theme_override_styles/panel:bg_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.3254902, 0.8627451, 0.5019608, 0.7137255)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/VBoxContainer/Header/Panel/HBoxContainer:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/ScoreText:theme_override_colors/default_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.5137255, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/ScoreValue:theme_override_colors/default_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.5137255, 0, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/AccuracyText:theme_override_colors/default_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/AccuracyValue:theme_override_colors/default_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/ComboText:theme_override_colors/default_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 0, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/ComboValue:theme_override_colors/default_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 0, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/NotesText:theme_override_colors/default_color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.7647059, 0, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/NotesValue:theme_override_colors/default_color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.7647059, 0, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/PerfectText:theme_override_colors/default_color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/PerfectValue:theme_override_colors/default_color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/GoodText:theme_override_colors/default_color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.5764706, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/GoodValue:theme_override_colors/default_color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.5764706, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/LateText:theme_override_colors/default_color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/LateValue:theme_override_colors/default_color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/MissText:theme_override_colors/default_color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.46229059, 0.46229059, 0.46229059, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/MissValue:theme_override_colors/default_color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.46229059, 0.46229059, 0.46229059, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/LifeLostText:theme_override_colors/default_color")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0.4, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/LifeLostValue:theme_override_colors/default_color")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0.4, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("MarginContainer/VBoxContainer/RankPanel/VBoxContainer/RankImage:scale")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.7464993, 1.4624435)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("MarginContainer/VBoxContainer/RankPanel/VBoxContainer/RankImage:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("MarginContainer/VBoxContainer/RankPanel/VBoxContainer/RankImage:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("MarginContainer/VBoxContainer/RankPanel/VBoxContainer/AccuracyComment:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("MarginContainer/VBoxContainer/Buttons/HboxContainer:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ltj21"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarkOverlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.8627451)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/Header/Panel:theme_override_styles/panel:bg_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.26666668, 0.36666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.3254902, 0.8627451, 0.5019608, 0), Color(0, 0.9607843, 0.40392157, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/VBoxContainer/Header/Panel/HBoxContainer:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.26666668, 0.33333334),
+"transitions": PackedFloat32Array(8.574185, 10.85551),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/ScoreText:theme_override_colors/default_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3333333, 0.36666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.5137255, 0, 0), Color(1, 0.5137255, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/ScoreValue:theme_override_colors/default_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.33333334, 0.36666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.5137255, 0, 0), Color(1, 0.5137255, 0, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/AccuracyText:theme_override_colors/default_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.33333334, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 1, 1, 0), Color(0, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/AccuracyValue:theme_override_colors/default_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.33333334, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 1, 1, 0), Color(0, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/ComboText:theme_override_colors/default_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.33333334, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 1, 0, 0), Color(0, 1, 0, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/ComboValue:theme_override_colors/default_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.33333334, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 1, 0, 0), Color(0, 1, 0, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/NotesText:theme_override_colors/default_color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.33333334, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.7647059, 0, 1, 0), Color(0.7647059, 0, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer/NotesValue:theme_override_colors/default_color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.33333334, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.7647059, 0, 1, 0), Color(0.7647059, 0, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/PerfectText:theme_override_colors/default_color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.33333334, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 0, 0), Color(1, 1, 0, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/PerfectValue:theme_override_colors/default_color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.33333334, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 0, 0), Color(1, 1, 0, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/GoodText:theme_override_colors/default_color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.33333334, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0.5764706, 1, 0), Color(0, 0.5764706, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/GoodValue:theme_override_colors/default_color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.33333334, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0.5764706, 1, 0), Color(0, 0.5764706, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/LateText:theme_override_colors/default_color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.36666667, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/LateValue:theme_override_colors/default_color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.36666667, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/MissText:theme_override_colors/default_color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.36666667, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.4627451, 0.4627451, 0.4627451, 0), Color(0.46229059, 0.46229059, 0.46229059, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/MissValue:theme_override_colors/default_color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0.36666667, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.4627451, 0.4627451, 0.4627451, 0), Color(0.46229059, 0.46229059, 0.46229059, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/LifeLostText:theme_override_colors/default_color")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0.36666667, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0.4, 0), Color(1, 0, 0.4, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2/LifeLostValue:theme_override_colors/default_color")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0.36666667, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0.4, 0), Color(1, 0, 0.4, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("MarginContainer/VBoxContainer/RankPanel/VBoxContainer/RankImage:scale")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.8666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7, 5.862), Vector2(1.7464993, 1.4624435)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("MarginContainer/VBoxContainer/RankPanel/VBoxContainer/RankImage:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0.76666665, 0.8333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("MarginContainer/VBoxContainer/RankPanel/VBoxContainer/RankImage:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0.76666665, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.5707963267948966, 0.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("MarginContainer/VBoxContainer/RankPanel/VBoxContainer/AccuracyComment:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0.9, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("MarginContainer/VBoxContainer/Buttons/HboxContainer:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0.8666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ament"]
+_data = {
+&"RESET": SubResource("Animation_pn3yc"),
+&"fade_in": SubResource("Animation_ltj21")
+}
+
+[node name="Resultado" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DarkOverlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.9019608)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ltj21")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Header/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="Cover" type="TextureRect" parent="MarginContainer/VBoxContainer/Header/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(44, 40)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Header/Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="SongTitle" type="Label" parent="MarginContainer/VBoxContainer/Header/Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6ttvc")
+theme_override_font_sizes/font_size = 8
+
+[node name="Artist" type="Label" parent="MarginContainer/VBoxContainer/Header/Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6ttvc")
+theme_override_font_sizes/font_size = 6
+
+[node name="Difficulty" type="Label" parent="MarginContainer/VBoxContainer/Header/Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6ttvc")
+theme_override_font_sizes/font_size = 6
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+theme_override_styles/separator = SubResource("StyleBoxLine_abjde")
+
+[node name="StatsPanel" type="Panel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_pn3yc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="ScoreText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0.5137255, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 5
+text = "Score"
+
+[node name="ScoreValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0.5137255, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 5
+
+[node name="AccuracyText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 5
+text = "Accuracy"
+
+[node name="AccuracyValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 5
+
+[node name="ComboText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 1, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+text = "Combo"
+
+[node name="ComboValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 1, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+
+[node name="NotesText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.7647059, 0, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+text = "Notas Acertadas"
+
+[node name="NotesValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.7647059, 0, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+
+[node name="GridContainer2" type="GridContainer" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="PerfectText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 1, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+text = "Perfect"
+
+[node name="PerfectValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 1, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+
+[node name="GoodText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0.5764706, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+text = "Good"
+
+[node name="GoodValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0.5764706, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+
+[node name="LateText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+text = "Late"
+
+[node name="LateValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+
+[node name="MissText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.46229059, 0.46229059, 0.46229059, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+text = "Miss"
+
+[node name="MissValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.46229059, 0.46229059, 0.46229059, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+
+[node name="LifeLostText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0, 0.4, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+text = "Vida Perdida"
+
+[node name="LifeLostValue" type="RichTextLabel" parent="MarginContainer/VBoxContainer/StatsPanel/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0, 0.4, 1)
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 4
+
+[node name="RankPanel" type="Panel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ament")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/RankPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="RankImage" type="Sprite2D" parent="MarginContainer/VBoxContainer/RankPanel/VBoxContainer"]
+position = Vector2(134, 12)
+scale = Vector2(1.7464993, 1.4624435)
+texture = ExtResource("2_ltj21")
+hframes = 6
+
+[node name="RankLabel" type="Label" parent="MarginContainer/VBoxContainer/RankPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6ttvc")
+theme_override_font_sizes/font_size = 16
+
+[node name="AccuracyComment" type="RichTextLabel" parent="MarginContainer/VBoxContainer/RankPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("1_6ttvc")
+theme_override_font_sizes/normal_font_size = 16
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+theme_override_styles/separator = SubResource("StyleBoxLine_6ttvc")
+
+[node name="Buttons" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HboxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ReplayButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons/HboxContainer"]
+layout_mode = 2
+text = "⟳"
+flat = true
+
+[node name="SongSelectButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons/HboxContainer"]
+layout_mode = 2
+text = "⇄"
+flat = true
+
+[node name="MenuButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons/HboxContainer"]
+layout_mode = 2
+text = "🏠︎"
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ament")
+}

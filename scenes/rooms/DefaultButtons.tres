@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ckynrbrjn01uc"]
+
+[ext_resource type="StyleBox" uid="uid://bgcjq1c1yewg4" path="res://scenes/rooms/focusButtonTittle.tres" id="1_q51gr"]
+[ext_resource type="FontFile" uid="uid://duw11mipxkaeh" path="res://scenes/ui/Pixel Digivolve.otf" id="1_u760o"]
+[ext_resource type="StyleBox" uid="uid://bfj62lpfsoham" path="res://scenes/rooms/hoverButtonTittle.tres" id="2_u760o"]
+[ext_resource type="StyleBox" uid="uid://bnjrppbmipyyi" path="res://scenes/rooms/normalButtonTittle.tres" id="3_of44c"]
+[ext_resource type="StyleBox" uid="uid://bfgn34q5ydj4" path="res://scenes/rooms/pressedButtonTittle.tres" id="4_k5d4o"]
+
+[sub_resource type="FontVariation" id="FontVariation_4v267"]
+base_font = ExtResource("1_u760o")
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/fonts/font = SubResource("FontVariation_4v267")
+Button/styles/focus = ExtResource("1_q51gr")
+Button/styles/hover = ExtResource("2_u760o")
+Button/styles/normal = ExtResource("3_of44c")
+Button/styles/pressed = ExtResource("4_k5d4o")

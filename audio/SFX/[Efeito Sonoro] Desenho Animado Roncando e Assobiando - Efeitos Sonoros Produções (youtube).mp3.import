@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bb37417sp1fp5"
+path="res://.godot/imported/[Efeito Sonoro] Desenho Animado Roncando e Assobiando - Efeitos Sonoros Produções (youtube).mp3-f45e627dfd3c631dc71f00be8665ab03.mp3str"
+
+[deps]
+
+source_file="res://audio/SFX/[Efeito Sonoro] Desenho Animado Roncando e Assobiando - Efeitos Sonoros Produções (youtube).mp3"
+dest_files=["res://.godot/imported/[Efeito Sonoro] Desenho Animado Roncando e Assobiando - Efeitos Sonoros Produções (youtube).mp3-f45e627dfd3c631dc71f00be8665ab03.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,148 @@
+[gd_scene load_steps=16 format=3 uid="uid://p8cbvnkt003r"]
+
+[ext_resource type="Script" uid="uid://d0tem868phs1x" path="res://scripts/carta.gd" id="1_j485v"]
+[ext_resource type="Texture2D" uid="uid://drlft5h5m27fv" path="res://sprites/Kath game/personagens/Carta.png" id="1_ug23p"]
+[ext_resource type="FontFile" uid="uid://duw11mipxkaeh" path="res://scenes/ui/Pixel Digivolve.otf" id="3_13em1"]
+[ext_resource type="AudioStream" uid="uid://dcm7s8ahb1hk" path="res://audio/SFX/carta abrindo.mp3" id="4_1c4qg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j485v"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13em1"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1c4qg"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okyl7"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_312g3"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0gux"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y53ht"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1yda"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1fwv"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xww4e"]
+atlas = ExtResource("1_ug23p")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ug23p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j485v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13em1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1c4qg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okyl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_312g3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0gux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y53ht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1yda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1fwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xww4e")
+}],
+"loop": false,
+"name": &"abrindo",
+"speed": 5.0
+}]
+
+[node name="Carta" type="CanvasLayer"]
+script = ExtResource("1_j485v")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = 2.5292969
+offset_bottom = 1.4670715
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.99818444, 1.0025443)
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(143.00002, 86)
+scale = Vector2(4.3674483, 3.8649082)
+sprite_frames = SubResource("SpriteFrames_ug23p")
+animation = &"abrindo"
+
+[node name="ColorRect" type="ColorRect" parent="AnimatedSprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.485601
+offset_top = -14.748087
+offset_right = -16.485601
+offset_bottom = -14.748087
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="AnimatedSprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.509036
+offset_top = -10.349534
+offset_right = 282.13074
+offset_bottom = 165.99013
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.08525807, 0.116739206)
+theme_override_colors/default_color = Color(0.9999961, 0.09715281, 0.22262394, 1)
+theme_override_fonts/normal_font = ExtResource("3_13em1")
+text = "  					FELIZ ANIVERSÁRIO!
+	Kath, isso é seu presente de aniversário! 	 Muito esforço foi colocado aqui, guarde isso com carinho, e entre 	sempre que precisar. Te amo garota, você é incrivel e maravilhosa, não tenha medo de ser feliz! 
+										-presente de EDDW"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 2.0
+offset_top = 156.0
+offset_right = 286.0
+offset_bottom = 199.0
+theme_override_colors/default_color = Color(0, 1, 0.09803922, 1)
+theme_override_fonts/normal_font = ExtResource("3_13em1")
+text = "Aperte qualquer botão pra abrir!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Carta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1c4qg")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4tl28xcwy2ru"
+path="res://.godot/imported/music.mp3-6305b331d1702d5552448fb9dc0d6495.mp3str"
+
+[deps]
+
+source_file="res://beatmaps/O Pequeno Principe/music.mp3"
+dest_files=["res://.godot/imported/music.mp3-6305b331d1702d5552448fb9dc0d6495.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

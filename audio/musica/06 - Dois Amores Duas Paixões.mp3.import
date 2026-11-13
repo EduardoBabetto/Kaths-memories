@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvvfkj7gpb3en"
+path="res://.godot/imported/06 - Dois Amores Duas Paixões.mp3-d1c525fe4f20c72e1e4321debee9b0a1.mp3str"
+
+[deps]
+
+source_file="res://audio/musica/06 - Dois Amores Duas Paixões.mp3"
+dest_files=["res://.godot/imported/06 - Dois Amores Duas Paixões.mp3-d1c525fe4f20c72e1e4321debee9b0a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

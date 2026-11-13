@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kqjdgpsi22wp"
+path="res://.godot/imported/music.mp3-1524522d63c6e0e13dd55df2a67331e4.mp3str"
+
+[deps]
+
+source_file="res://beatmaps/Rap do Naruto e Sasuke/music.mp3"
+dest_files=["res://.godot/imported/music.mp3-1524522d63c6e0e13dd55df2a67331e4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

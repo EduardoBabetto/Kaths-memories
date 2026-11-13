@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://b77ygwrx4se68"]
+
+[ext_resource type="Texture2D" uid="uid://djmy33x7rybt5" path="res://sprites/Kath game/personagens/VelaAni.png" id="1_o4jsc"]
+[ext_resource type="AudioStream" uid="uid://bhqlb5gde366i" path="res://audio/SFX/Queiimando.MP3" id="2_1rv3i"]
+[ext_resource type="AudioStream" uid="uid://ngrd6fe715sb" path="res://audio/SFX/Apagando a vela.mp3" id="3_hc7ag"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o4jsc"]
+radius = 13.038404
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vis6g"]
+atlas = ExtResource("1_o4jsc")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rv3i"]
+atlas = ExtResource("1_o4jsc")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hc7ag"]
+atlas = ExtResource("1_o4jsc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4e4w"]
+atlas = ExtResource("1_o4jsc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b58ft"]
+atlas = ExtResource("1_o4jsc")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhwxn"]
+atlas = ExtResource("1_o4jsc")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oudq4"]
+atlas = ExtResource("1_o4jsc")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1ju8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vis6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rv3i")
+}],
+"loop": false,
+"name": &"apagar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hc7ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4e4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b58ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhwxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oudq4")
+}],
+"loop": true,
+"name": &"fogo",
+"speed": 5.0
+}]
+
+[node name="Vela" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_o4jsc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v1ju8")
+animation = &"apagar"
+autoplay = "fogo"
+
+[node name="Queimando" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1rv3i")
+
+[node name="Apagado" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hc7ag")

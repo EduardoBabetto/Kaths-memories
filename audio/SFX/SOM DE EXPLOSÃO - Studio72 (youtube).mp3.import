@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bj14yus2n5ccn"
+path="res://.godot/imported/SOM DE EXPLOSÃO - Studio72 (youtube).mp3-c7e6591c28e4aac087e21e1c92f008f5.mp3str"
+
+[deps]
+
+source_file="res://audio/SFX/SOM DE EXPLOSÃO - Studio72 (youtube).mp3"
+dest_files=["res://.godot/imported/SOM DE EXPLOSÃO - Studio72 (youtube).mp3-c7e6591c28e4aac087e21e1c92f008f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

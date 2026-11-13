@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvlol2vbbgenu"
+path="res://.godot/imported/Nope your too late i already died - wifiskeleton (youtube).mp3-ca32f8476c1ef58bba47976ab6ad8133.mp3str"
+
+[deps]
+
+source_file="res://audio/musica/Nope your too late i already died - wifiskeleton (youtube).mp3"
+dest_files=["res://.godot/imported/Nope your too late i already died - wifiskeleton (youtube).mp3-ca32f8476c1ef58bba47976ab6ad8133.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

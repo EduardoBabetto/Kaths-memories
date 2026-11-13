@@ -1,0 +1,363 @@
+[gd_scene load_steps=24 format=3 uid="uid://dqak8mqpk3sfw"]
+
+[ext_resource type="Texture2D" uid="uid://bkg2r2rffaf5i" path="res://sprites/Kath game/background/Menu Diluc-1.png.png" id="1_eus4j"]
+[ext_resource type="Script" uid="uid://htrew42ngw44" path="res://scripts/diluc_minigame.gd" id="1_phy0n"]
+[ext_resource type="Theme" uid="uid://ckynrbrjn01uc" path="res://scenes/rooms/DefaultButtons.tres" id="2_nwxh4"]
+[ext_resource type="FontFile" uid="uid://duw11mipxkaeh" path="res://scenes/ui/Pixel Digivolve.otf" id="3_h4ttn"]
+[ext_resource type="StyleBox" uid="uid://bgcjq1c1yewg4" path="res://scenes/rooms/focusButtonTittle.tres" id="4_phy0n"]
+[ext_resource type="StyleBox" uid="uid://bfj62lpfsoham" path="res://scenes/rooms/hoverButtonTittle.tres" id="5_o107c"]
+[ext_resource type="StyleBox" uid="uid://bnjrppbmipyyi" path="res://scenes/rooms/normalButtonTittle.tres" id="6_4cxvj"]
+[ext_resource type="StyleBox" uid="uid://bfgn34q5ydj4" path="res://scenes/rooms/pressedButtonTittle.tres" id="7_clgm2"]
+[ext_resource type="Texture2D" uid="uid://5qox8hflk5by" path="res://sprites/Kath game/Diluc Sword-1.png.png" id="8_d16sf"]
+[ext_resource type="PackedScene" uid="uid://epdiiglem6xn" path="res://scenes/characters/player_diluc.tscn" id="9_nwxh4"]
+[ext_resource type="PackedScene" uid="uid://8gjkuf6wrwn6" path="res://scenes/characters/inimigos.tscn" id="10_h4ttn"]
+[ext_resource type="Texture2D" uid="uid://bc6ocio1l0aeq" path="res://sprites/Kath game/background/Arena-1.png.png" id="12_o107c"]
+[ext_resource type="Script" uid="uid://b5mxk56e4aoxl" path="res://scripts/limites.gd" id="13_bokqt"]
+[ext_resource type="AudioStream" uid="uid://btwkywcv3qdg7" path="res://audio/SFX/Treasure Discovery Sound Effect - Sound Effect Database (youtube).mp3" id="13_d16sf"]
+[ext_resource type="AudioStream" uid="uid://dccjapu2ps5ji" path="res://audio/SFX/William Rosati - Floating Also ♫ NO COPYRIGHT 8-bit Music - Free Music (youtube).mp3" id="14_bokqt"]
+[ext_resource type="AudioStream" uid="uid://crxhaj7kg2dsd" path="res://audio/SFX/Monplaisir - Soundtrack ♫ NO COPYRIGHT 8-bit Music - Free Music (youtube).mp3" id="15_rrv0y"]
+
+[sub_resource type="Theme" id="Theme_rrv0y"]
+Button/fonts/font = ExtResource("3_h4ttn")
+Button/styles/focus = ExtResource("4_phy0n")
+Button/styles/hover = ExtResource("5_o107c")
+Button/styles/normal = ExtResource("6_4cxvj")
+Button/styles/pressed = ExtResource("7_clgm2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o107c"]
+bg_color = Color(0, 0.7921569, 0, 0.7921569)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cxvj"]
+bg_color = Color(0, 1, 0, 1)
+border_width_right = 2
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nwxh4"]
+a = Vector2(991, 3)
+b = Vector2(-441, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_o107c"]
+a = Vector2(3, 435)
+b = Vector2(2, -350)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_phy0n"]
+a = Vector2(4, -373)
+b = Vector2(0, 427)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_h4ttn"]
+a = Vector2(-3.0517578e-05, -803)
+b = Vector2(2.0000305, 639)
+
+[node name="Diluc_minigame" type="Node2D" groups=["minigame_runtime"]]
+z_index = 1
+script = ExtResource("1_phy0n")
+inimigo_scene = ExtResource("10_h4ttn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackGround" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(144.5, 103.5)
+scale = Vector2(0.7224999, 0.5971428)
+texture = ExtResource("1_eus4j")
+
+[node name="Recompensa" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Recompensa"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 253.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.77254903)
+
+[node name="Titulo" type="Label" parent="CanvasLayer/Recompensa"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 31.0
+offset_right = 236.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("3_h4ttn")
+text = "Escolha um Upgrade"
+
+[node name="Opcao1" type="Button" parent="CanvasLayer/Recompensa"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 77.0
+offset_right = 105.0
+offset_bottom = 167.0
+theme = ExtResource("2_nwxh4")
+autowrap_mode = 2
+
+[node name="Opcao2" type="Button" parent="CanvasLayer/Recompensa"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 81.0
+offset_right = 197.0
+offset_bottom = 160.0
+theme = ExtResource("2_nwxh4")
+autowrap_mode = 3
+
+[node name="Opcao3" type="Button" parent="CanvasLayer/Recompensa"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 81.0
+offset_right = 277.0
+offset_bottom = 176.0
+theme = ExtResource("2_nwxh4")
+autowrap_mode = 3
+
+[node name="Menu" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start_btn" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 117.0
+offset_right = 138.0
+offset_bottom = 147.0
+theme = ExtResource("2_nwxh4")
+text = "Jogar"
+
+[node name="Quit_Btn" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 151.0
+offset_right = 137.0
+offset_bottom = 179.0
+theme = SubResource("Theme_rrv0y")
+text = "Sair"
+
+[node name="Logo" type="Sprite2D" parent="CanvasLayer/Menu"]
+position = Vector2(77.375, 53.75)
+scale = Vector2(1.1924999, 0.8449999)
+texture = ExtResource("8_d16sf")
+
+[node name="HUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BarraVida" type="ProgressBar" parent="CanvasLayer/HUD"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 87.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_h4ttn")
+theme_override_styles/background = SubResource("StyleBoxFlat_o107c")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4cxvj")
+min_value = 1.0
+value = 100.0
+rounded = true
+
+[node name="Onda" type="Label" parent="CanvasLayer/HUD"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 2.0
+offset_right = 155.0
+offset_bottom = 25.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_h4ttn")
+theme_override_font_sizes/font_size = 10
+
+[node name="Inimigos" type="Label" parent="CanvasLayer/HUD"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 3.0
+offset_right = 222.0
+offset_bottom = 26.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_h4ttn")
+theme_override_font_sizes/font_size = 10
+
+[node name="Pontuacao" type="Label" parent="CanvasLayer/HUD"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 31.0
+offset_right = 43.0
+offset_bottom = 54.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_h4ttn")
+theme_override_font_sizes/font_size = 10
+
+[node name="Resultado" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Resultado"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 6.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="Titulo" type="Label" parent="CanvasLayer/Resultado"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 16.0
+offset_right = 132.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("3_h4ttn")
+theme_override_font_sizes/font_size = 20
+
+[node name="Pontuacao" type="Label" parent="CanvasLayer/Resultado"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 50.0
+offset_right = 70.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_h4ttn")
+
+[node name="Onda" type="Label" parent="CanvasLayer/Resultado"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 116.0
+offset_right = 74.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("3_h4ttn")
+
+[node name="InimigosDerrotados" type="Label" parent="CanvasLayer/Resultado"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 81.0
+offset_right = 72.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 0.003921569, 0, 1)
+theme_override_fonts/font = ExtResource("3_h4ttn")
+
+[node name="BotaoContinuar" type="Button" parent="CanvasLayer/Resultado"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 152.0
+offset_right = 209.0
+offset_bottom = 182.0
+theme = ExtResource("2_nwxh4")
+text = "Continuar"
+
+[node name="Arena" type="Node2D" parent="."]
+
+[node name="player_diluc" parent="Arena" groups=["player_diluc"] instance=ExtResource("9_nwxh4")]
+position = Vector2(137, 164)
+
+[node name="Camera2D" type="Camera2D" parent="Arena/player_diluc"]
+position = Vector2(8, -59)
+ignore_rotation = false
+limit_enabled = false
+limit_left = 963
+limit_top = -304
+limit_right = -539
+limit_bottom = 530
+limit_smoothed = true
+position_smoothing_speed = 6.0
+editor_draw_limits = true
+
+[node name="Fundo" type="Sprite2D" parent="Arena"]
+position = Vector2(204, 117)
+scale = Vector2(3.7600005, 2.76)
+texture = ExtResource("12_o107c")
+
+[node name="Inimigos" parent="Arena" groups=["inimigos"] instance=ExtResource("10_h4ttn")]
+position = Vector2(874, 13)
+
+[node name="SpawnPoints" type="Node2D" parent="Arena"]
+position = Vector2(170, 84)
+
+[node name="Marker2D" type="Marker2D" parent="Arena/SpawnPoints"]
+position = Vector2(309, -115)
+
+[node name="Marker2D2" type="Marker2D" parent="Arena/SpawnPoints"]
+position = Vector2(278, 178)
+
+[node name="Marker2D3" type="Marker2D" parent="Arena/SpawnPoints"]
+position = Vector2(-319, -134)
+
+[node name="Marker2D4" type="Marker2D" parent="Arena/SpawnPoints"]
+position = Vector2(-276, 199)
+
+[node name="Limites" type="Node2D" parent="Arena"]
+script = ExtResource("13_bokqt")
+
+[node name="Cima" type="StaticBody2D" parent="Arena/Limites"]
+position = Vector2(165, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Limites/Cima"]
+visible = false
+position = Vector2(-225, -259)
+shape = SubResource("SegmentShape2D_nwxh4")
+
+[node name="Direita" type="StaticBody2D" parent="Arena/Limites"]
+position = Vector2(165, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Limites/Direita"]
+visible = false
+position = Vector2(767, -1)
+shape = SubResource("SegmentShape2D_o107c")
+
+[node name="Esquerda" type="StaticBody2D" parent="Arena/Limites"]
+position = Vector2(165, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Limites/Esquerda"]
+visible = false
+position = Vector2(-671, 23)
+shape = SubResource("SegmentShape2D_phy0n")
+
+[node name="Baixo" type="StaticBody2D" parent="Arena/Limites"]
+position = Vector2(165, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Limites/Baixo"]
+visible = false
+position = Vector2(-34, 395)
+rotation = 1.5707964
+shape = SubResource("SegmentShape2D_h4ttn")
+
+[node name="Recompensa" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_d16sf")
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_bokqt")
+parameters/looping = true
+
+[node name="MenuSondTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_rrv0y")
+parameters/looping = true

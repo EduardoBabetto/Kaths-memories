@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1o87qw2k4ymq"]
+
+[ext_resource type="Script" uid="uid://dwvkev7ncmwth" path="res://scripts/BaixoGame/controllers/UIController.gd" id="1_abgor"]
+
+[node name="UIController" type="Node2D"]
+script = ExtResource("1_abgor")

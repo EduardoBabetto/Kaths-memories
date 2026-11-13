@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bddnj8qyxtq2a"]
+
+[ext_resource type="Texture2D" uid="uid://cbvlki66xitdg" path="res://sprites/Kath game/personagens/Mesa do bolo.png" id="1_hs6be"]
+[ext_resource type="AudioStream" uid="uid://c2ky8h8nn4jnl" path="res://audio/SFX/comendo.MP3" id="2_f2snq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f2snq"]
+radius = 19.0
+
+[node name="MesaBolo" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hs6be")
+hframes = 6
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_f2snq")
+one_way_collision_margin = 0.0
+
+[node name="Comendo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_f2snq")

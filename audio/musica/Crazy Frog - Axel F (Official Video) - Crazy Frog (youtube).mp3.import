@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvmy44xep8ghj"
+path="res://.godot/imported/Crazy Frog - Axel F (Official Video) - Crazy Frog (youtube).mp3-7f8d49fa2375f736205a171feedbf903.mp3str"
+
+[deps]
+
+source_file="res://audio/musica/Crazy Frog - Axel F (Official Video) - Crazy Frog (youtube).mp3"
+dest_files=["res://.godot/imported/Crazy Frog - Axel F (Official Video) - Crazy Frog (youtube).mp3-7f8d49fa2375f736205a171feedbf903.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

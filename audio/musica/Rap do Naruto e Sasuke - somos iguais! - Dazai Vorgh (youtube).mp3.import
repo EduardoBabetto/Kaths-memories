@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5h4me2dtibl"
+path="res://.godot/imported/Rap do Naruto e Sasuke - somos iguais! - Dazai Vorgh (youtube).mp3-c33a9cbbfa079ca84c8f692120ee79cb.mp3str"
+
+[deps]
+
+source_file="res://audio/musica/Rap do Naruto e Sasuke - somos iguais! - Dazai Vorgh (youtube).mp3"
+dest_files=["res://.godot/imported/Rap do Naruto e Sasuke - somos iguais! - Dazai Vorgh (youtube).mp3-c33a9cbbfa079ca84c8f692120ee79cb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dccjapu2ps5ji"
+path="res://.godot/imported/William Rosati - Floating Also ♫ NO COPYRIGHT 8-bit Music - Free Music (youtube).mp3-f5bc402022e4faaaa42f94e6fdd7465e.mp3str"
+
+[deps]
+
+source_file="res://audio/SFX/William Rosati - Floating Also ♫ NO COPYRIGHT 8-bit Music - Free Music (youtube).mp3"
+dest_files=["res://.godot/imported/William Rosati - Floating Also ♫ NO COPYRIGHT 8-bit Music - Free Music (youtube).mp3-f5bc402022e4faaaa42f94e6fdd7465e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

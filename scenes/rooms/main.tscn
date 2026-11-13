@@ -1,0 +1,151 @@
+[gd_scene load_steps=19 format=4 uid="uid://djwuc4igvg5db"]
+
+[ext_resource type="Script" uid="uid://dttueiwvat8bs" path="res://scripts/main.gd" id="1_l8x0q"]
+[ext_resource type="PackedScene" uid="uid://bwmimtv4h45ma" path="res://scenes/characters/player.tscn" id="1_o3ccl"]
+[ext_resource type="TileSet" uid="uid://de51j3qxemvf8" path="res://tiles/Terrain.tres" id="2_hhji2"]
+[ext_resource type="PackedScene" uid="uid://cbmdpuqyop64q" path="res://scenes/characters/camera_2d.tscn" id="3_3os3j"]
+[ext_resource type="TileSet" uid="uid://dwxhyi0nc2gb2" path="res://tiles/decoretion.tres" id="3_oafy4"]
+[ext_resource type="Texture2D" uid="uid://cp3i2ix2sdlsv" path="res://sprites/Kath game/background/Background room-1.png.png" id="4_hhji2"]
+[ext_resource type="PackedScene" uid="uid://b7tjb4krwtjfr" path="res://scenes/characters/level_end.tscn" id="6_4pw6x"]
+[ext_resource type="PackedScene" uid="uid://cxm8rcxlvyn70" path="res://scenes/characters/dialog_box.tscn" id="7_p63b6"]
+[ext_resource type="PackedScene" uid="uid://b418g8tqa74jj" path="res://scenes/characters/porta.tscn" id="9_kdwso"]
+[ext_resource type="PackedScene" uid="uid://btpqj4y1niqqt" path="res://scenes/characters/objeto_interativo.tscn" id="10_88koh"]
+[ext_resource type="PackedScene" uid="uid://vy0qkl5154l0" path="res://scenes/characters/pc.tscn" id="10_x2qu0"]
+[ext_resource type="Script" uid="uid://cge5g60a2g2g3" path="res://scripts/cama_dialogo.gd" id="11_hxrnf"]
+[ext_resource type="Script" uid="uid://dvm1dcl3kg2ki" path="res://scripts/pc.gd" id="11_l8x0q"]
+[ext_resource type="Script" uid="uid://duld8x3a58hyw" path="res://scripts/armario_dialogo.gd" id="12_oby0s"]
+[ext_resource type="Script" uid="uid://lwh50s3jl5tm" path="res://scripts/computador_dialogo.gd" id="13_b8ubu"]
+[ext_resource type="PackedScene" uid="uid://jhgldc7me1s7" path="res://scenes/characters/lampada.tscn" id="14_hxrnf"]
+[ext_resource type="PackedScene" uid="uid://co38t0hxh568o" path="res://scenes/characters/interruptor.tscn" id="15_oby0s"]
+[ext_resource type="AudioStream" uid="uid://c5rshqukege5h" path="res://audio/musica/AdhesiveWombat - Night Shade ♫ NO COPYRIGHT 8-bit Music - Free Music (youtube).mp3" id="16_b8ubu"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_l8x0q")
+metadata/_edit_vertical_guides_ = [379.0, 400.0, 309.0, 287.0]
+
+[node name="player" parent="." instance=ExtResource("1_o3ccl")]
+position = Vector2(71, 157)
+
+[node name="Tiles" type="Node2D" parent="."]
+
+[node name="terrain" type="TileMapLayer" parent="Tiles"]
+z_index = 1
+position = Vector2(-1, -18)
+tile_map_data = PackedByteArray("AAAPABAABQADAAUAAAAQABAABQADAAUAAAARAA8ABQADAAQAAAARABAABQADAAUAAAASAA8ABQADAAQAAAASABAABQADAAUAAAAAAAwABQACAAMAAAAAAA0ABQACAAQAAAAAAA4ABQACAAQAAAAAAA8ABQACAAQAAAAAABAABQACAAUAAAABAAwABQADAAcAAAABAA0ABQADAAQAAAABAA4ABQADAAQAAAABAA8ABQADAAQAAAABABAABQADAAUAAAACAAwABQADAAMAAAACAA0ABQADAAQAAAACAA4ABQADAAQAAAACAA8ABQADAAQAAAACABAABQADAAUAAAADAAwABQADAAcAAAADAA0ABQADAAQAAAADAA4ABQADAAQAAAADAA8ABQADAAQAAAADABAABQADAAUAAAAEAAwABQADAAMAAAAEAA0ABQADAAQAAAAEAA4ABQADAAQAAAAEAA8ABQADAAQAAAAEABAABQADAAUAAAAFAAwABQADAAcAAAAFAA0ABQADAAQAAAAFAA4ABQADAAQAAAAFAA8ABQADAAQAAAAFABAABQADAAUAAAAGAAwABQADAAMAAAAGAA0ABQADAAQAAAAGAA4ABQADAAQAAAAGAA8ABQADAAQAAAAGABAABQADAAUAAAAHAAwABQADAAcAAAAHAA0ABQADAAQAAAAHAA4ABQADAAQAAAAHAA8ABQADAAQAAAAHABAABQADAAUAAAAIAAwABQADAAMAAAAIAA0ABQADAAQAAAAIAA4ABQADAAQAAAAIAA8ABQADAAQAAAAIABAABQADAAUAAAAJAAwABQADAAcAAAAJAA0ABQADAAQAAAAJAA4ABQADAAQAAAAJAA8ABQADAAQAAAAJABAABQADAAUAAAAKAAwABQADAAMAAAAKAA0ABQADAAQAAAAKAA4ABQADAAQAAAAKAA8ABQADAAQAAAAKABAABQADAAUAAAALAAwABQADAAcAAAALAA0ABQADAAQAAAALAA4ABQADAAQAAAALAA8ABQADAAQAAAALABAABQADAAUAAAAMAAwABQADAAMAAAAMAA0ABQADAAQAAAAMAA4ABQADAAQAAAAMAA8ABQADAAQAAAAMABAABQADAAUAAAANAAwABQADAAcAAAANAA0ABQADAAQAAAANAA4ABQADAAQAAAANAA8ABQADAAQAAAANABAABQADAAUAAAAOAAwABQADAAcAAAAOAA0ABQADAAQAAAAOAA4ABQADAAQAAAAOAA8ABQADAAQAAAAOABAABQADAAUAAAAPAAwABQADAAMAAAAPAA0ABQADAAQAAAAPAA4ABQADAAQAAAAPAA8ABQADAAQAAAAQAAwABQADAAcAAAAQAA0ABQADAAQAAAAQAA4ABQADAAQAAAAQAA8ABQADAAQAAAARAAwABQADAAMAAAARAA0ABQADAAQAAAARAA4ABQADAAQAAAASAAwABQADAAcAAAASAA0ABQADAAQAAAASAA4ABQADAAQAAAAMAAsABQAKAAQAABATAAwABQAEAAcAAAATAA0ABQAEAAQAAAATAA4ABQAEAAQAAAATAA8ABQAEAAQAAAATABAABQAEAAUAAAA=")
+tile_set = ExtResource("2_hhji2")
+
+[node name="Decoration" type="TileMapLayer" parent="Tiles"]
+tile_map_data = PackedByteArray("AAAIAAkABwACAAMAAAABAAkABwARAAAAAAAEAAoABwACAAEAAAAEAAkABwACAAAAAAAGAAkABwAEAAAAAAACAAUABwAHAAEAAAAFAAQABwAKAAEAAAAJAAUABwANAAEAAAAPAAQABwAHAAQAAAA=")
+tile_set = ExtResource("3_oafy4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.7175, 0.6330935)
+texture = ExtResource("4_hhji2")
+centered = false
+
+[node name="Camera2D" parent="." instance=ExtResource("3_3os3j")]
+limit_top = 0
+limit_right = 287
+
+[node name="LevelEnd" parent="." instance=ExtResource("6_4pw6x")]
+position = Vector2(234, 155)
+next_level = "memories"
+
+[node name="CollisionShape2D" parent="LevelEnd" index="0"]
+position = Vector2(0, -1)
+
+[node name="dialog_box" parent="." instance=ExtResource("7_p63b6")]
+
+[node name="porta" parent="." instance=ExtResource("9_kdwso")]
+light_mask = 2
+z_index = -1
+position = Vector2(236, 159)
+collision_layer = 0
+collision_mask = 2
+
+[node name="Pc" parent="." instance=ExtResource("10_x2qu0")]
+position = Vector2(136, 151)
+script = ExtResource("11_l8x0q")
+
+[node name="CamaDialogo" parent="." instance=ExtResource("10_88koh")]
+position = Vector2(72, 162)
+script = ExtResource("11_hxrnf")
+dialog_data = [{
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 0,
+"text": "Ai que soninho... bora dormir",
+"text_color": Color(1, 0, 0, 1)
+}]
+
+[node name="ArmarioDialogo" parent="." instance=ExtResource("10_88koh")]
+position = Vector2(24, 156)
+script = ExtResource("12_oby0s")
+dialog_data = [{
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "Melhor não abrir... Vai tudo cair dai.",
+"text_color": Color(1, 0, 0, 1)
+}]
+
+[node name="ComputadorDialogo" parent="." groups=["ComputadorDialogo"] instance=ExtResource("10_88koh")]
+position = Vector2(130, 154)
+script = ExtResource("13_b8ubu")
+dialog_data = [{
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "Ai meu Deus",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(0, 1.643, 0.339, 1),
+"name": "Kath",
+"side": 2,
+"text": "Que vontade de jogar Bloons!!!",
+"text_color": Color(1, 0, 0, 1)
+}]
+dialog_data_queimado = [{
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(1, 0, 0, 1),
+"name": "Kath",
+"side": 2,
+"text": "MAS NEM LIGOU DIREITO E ELE EXPLODIU?!",
+"text_color": Color(1, 0, 0, 1)
+}, {
+"animation": "Kath",
+"bg_color": Color(0, 0, 0, 0.8),
+"border_color": Color(1, 0, 0, 1),
+"name": "Kath",
+"side": 2,
+"text": "Fez até barulho de microondas slk...",
+"text_color": Color(1, 0, 0, 1)
+}]
+
+[node name="lampada" parent="." instance=ExtResource("14_hxrnf")]
+position = Vector2(145, 17)
+
+[node name="interruptor" parent="." node_paths=PackedStringArray("lampada") groups=["lampadas"] instance=ExtResource("15_oby0s")]
+visibility_layer = 2
+position = Vector2(194, 152)
+lampada = NodePath("../lampada")
+
+[node name="SoundTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_b8ubu")
+volume_db = -5.0
+parameters/looping = true
+
+[connection signal="body_exited" from="LevelEnd" to="LevelEnd" method="_on_body_exited"]
+[connection signal="toggled" from="interruptor" to="lampada" method="_on_interruptor_toggled"]
+
+[editable path="LevelEnd"]

@@ -1,0 +1,661 @@
+[gd_scene load_steps=43 format=3 uid="uid://jw08uir7320k"]
+
+[ext_resource type="Script" uid="uid://ht3obhb2xbgs" path="res://scripts/BaixoGame/kath_baixo.gd" id="1_a4qnd"]
+[ext_resource type="Texture2D" uid="uid://d03aswjel38yw" path="res://sprites/Kath game/Notas musicais.png" id="1_qtqwq"]
+[ext_resource type="Texture2D" uid="uid://cmuk8e1uiwstw" path="res://sprites/Kath game/Animacao/Kath baixo.png" id="1_yodec"]
+[ext_resource type="Texture2D" uid="uid://buvbqa5xcpdf7" path="res://sprites/Kath game/personagens/Tecla.png" id="3_a4qnd"]
+[ext_resource type="Texture2D" uid="uid://ddijp2lug7oua" path="res://sprites/Kath game/personagens/Seta A.png" id="4_ixe4k"]
+[ext_resource type="Texture2D" uid="uid://bs10s6q6oxedm" path="res://sprites/Kath game/personagens/Seta W.png" id="5_4foiy"]
+[ext_resource type="Script" uid="uid://bir5vgc6l3pnu" path="res://scripts/seta.gd" id="5_ixe4k"]
+[ext_resource type="Texture2D" uid="uid://rkpm12383c51" path="res://sprites/Kath game/personagens/Tecla S.png" id="6_qx7tt"]
+[ext_resource type="Texture2D" uid="uid://bmbow5gbychau" path="res://sprites/Kath game/personagens/Tecla D.png" id="7_vcghe"]
+[ext_resource type="Theme" uid="uid://ckynrbrjn01uc" path="res://scenes/rooms/DefaultButtons.tres" id="8_v1mcy"]
+[ext_resource type="FontFile" uid="uid://duw11mipxkaeh" path="res://scenes/ui/Pixel Digivolve.otf" id="9_k7gsw"]
+[ext_resource type="PackedScene" uid="uid://c8vqbqy8hgs0d" path="res://scenes/ui/song_item.tscn" id="10_3y0a6"]
+[ext_resource type="LabelSettings" uid="uid://cjer065pvmf30" path="res://scenes/rooms/kath_baixo_label.tres" id="10_oqrch"]
+[ext_resource type="Texture2D" uid="uid://b0q1gxusj5pj4" path="res://sprites/Kath game/Effects Acertos.png" id="12_4foiy"]
+[ext_resource type="StyleBox" uid="uid://bgcjq1c1yewg4" path="res://scenes/rooms/focusButtonTittle.tres" id="13_k7gsw"]
+[ext_resource type="StyleBox" uid="uid://bfj62lpfsoham" path="res://scenes/rooms/hoverButtonTittle.tres" id="14_mc68l"]
+[ext_resource type="StyleBox" uid="uid://bnjrppbmipyyi" path="res://scenes/rooms/normalButtonTittle.tres" id="15_0i57e"]
+[ext_resource type="StyleBox" uid="uid://bfgn34q5ydj4" path="res://scenes/rooms/pressedButtonTittle.tres" id="16_td2en"]
+[ext_resource type="Texture2D" uid="uid://dwshdk0ewmy4t" path="res://sprites/Kath game/Coracao.png" id="17_mc68l"]
+[ext_resource type="PackedScene" uid="uid://ckauvei3fcyit" path="res://scenes/ui/beatmap_controller.tscn" id="18_w53p1"]
+[ext_resource type="PackedScene" uid="uid://c1o87qw2k4ymq" path="res://scenes/ui/ui_controller.tscn" id="19_3y0a6"]
+[ext_resource type="Script" uid="uid://i5be87kl1k5v" path="res://scripts/BaixoGame/controllers/ArrowController.gd" id="20_ixwo4"]
+[ext_resource type="PackedScene" uid="uid://cwfi0px08kapk" path="res://scenes/rooms/resultado.tscn" id="20_ydwoj"]
+[ext_resource type="AudioStream" uid="uid://xacujicb1hss" path="res://audio/musica/Kevin MacLeod - 8bit Dungeon Boss ♫ NO COPYRIGHT 8-bit Music - Free Music (youtube).mp3" id="21_ikxt8"]
+[ext_resource type="Script" uid="uid://bjqx2dfsk1cgi" path="res://scripts/BaixoGame/controllers/ScoreController.gd" id="21_oqrch"]
+[ext_resource type="Script" uid="uid://dwql3lfijsff6" path="res://scripts/BaixoGame/controllers/LifeController.gd" id="22_ydwoj"]
+[ext_resource type="Script" uid="uid://cgcpo7k5mt686" path="res://scripts/BaixoGame/controllers/EffectController.gd" id="23_t4tg0"]
+[ext_resource type="Script" uid="uid://d3qjneaib8860" path="res://scripts/BaixoGame/controllers/DecorationController.gd" id="24_ikxt8"]
+[ext_resource type="Script" uid="uid://dj0orvdvf4o0e" path="res://scripts/BaixoGame/controllers/GameStateController.gd" id="25_lqil2"]
+[ext_resource type="Script" uid="uid://cwyloihqbddem" path="res://scripts/BaixoGame/controllers/song_select_controller.gd" id="27_ixwo4"]
+[ext_resource type="Script" uid="uid://b66ocvvuni552" path="res://scripts/BaixoGame/controllers/ResultController.gd" id="30_t4tg0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnfwm"]
+atlas = ExtResource("1_yodec")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydqnr"]
+atlas = ExtResource("1_yodec")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryato"]
+atlas = ExtResource("1_yodec")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k7gsw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnfwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydqnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryato")
+}],
+"loop": true,
+"name": &"baixo",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_mc68l"]
+
+[sub_resource type="Theme" id="Theme_0i57e"]
+Button/fonts/font = ExtResource("9_k7gsw")
+Button/styles/focus = ExtResource("13_k7gsw")
+Button/styles/hover = ExtResource("14_mc68l")
+Button/styles/normal = ExtResource("15_0i57e")
+Button/styles/pressed = ExtResource("16_td2en")
+
+[sub_resource type="Animation" id="Animation_t4tg0"]
+resource_name = "Fade_in"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ikxt8"]
+_data = {
+&"Fade_in": SubResource("Animation_t4tg0")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqrch"]
+bg_color = Color(0.21580184, 0.2505795, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+shadow_color = Color(0, 0, 0, 0.64705884)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oqrch"]
+load_path = "res://.godot/imported/Cover.jpg-33f1e7d74ec21dbbb7abe38b0b727c00.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydwoj"]
+bg_color = Color(0.21580184, 0.2505795, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[node name="kath baixo" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_a4qnd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8249593, 0, 0.41414726, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(64, 101)
+scale = Vector2(3.373, 3.828)
+sprite_frames = SubResource("SpriteFrames_k7gsw")
+animation = &"baixo"
+autoplay = "baixo"
+
+[node name="Menu" type="Node2D" parent="CanvasLayer"]
+z_index = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer/Menu"]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Menu/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0.06100855, 0.6591482, 0.559)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Menu/CanvasLayer"]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -65.0
+offset_right = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Menu/CanvasLayer"]
+offset_left = 61.0
+offset_top = 24.0
+offset_right = 241.0
+offset_bottom = 55.0
+theme = SubResource("Theme_mc68l")
+theme_override_colors/default_color = Color(9.144843e-06, 0.9978903, 0.6295184, 1)
+text = "Friday Night Kath!"
+fit_content = true
+tab_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 195
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Menu/CanvasLayer"]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = 79.0
+offset_right = 35.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Menu/CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Start_btn" type="Button" parent="CanvasLayer/Menu/CanvasLayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("8_v1mcy")
+text = "Jogar"
+
+[node name="Quit_Btn" type="Button" parent="CanvasLayer/Menu/CanvasLayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_0i57e")
+text = "Sair"
+
+[node name="decoration" type="Node2D" parent="CanvasLayer/Menu/CanvasLayer"]
+position = Vector2(57, 161)
+
+[node name="decoration" type="Sprite2D" parent="CanvasLayer/Menu/CanvasLayer/decoration"]
+position = Vector2(-6, -109)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+frame = 2
+
+[node name="decoration2" type="Sprite2D" parent="CanvasLayer/Menu/CanvasLayer/decoration"]
+texture = ExtResource("1_qtqwq")
+hframes = 3
+frame = 1
+
+[node name="decoration3" type="Sprite2D" parent="CanvasLayer/Menu/CanvasLayer/decoration"]
+position = Vector2(189, -86)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+frame = 1
+
+[node name="decoration4" type="Sprite2D" parent="CanvasLayer/Menu/CanvasLayer/decoration"]
+position = Vector2(215, 14)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+frame = 2
+
+[node name="decoration5" type="Sprite2D" parent="CanvasLayer/Menu/CanvasLayer/decoration"]
+position = Vector2(210, -117)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+
+[node name="decoration6" type="Sprite2D" parent="CanvasLayer/Menu/CanvasLayer/decoration"]
+position = Vector2(-39, -23)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+
+[node name="decoration7" type="Sprite2D" parent="CanvasLayer/Menu/CanvasLayer/decoration"]
+position = Vector2(-2, -65)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+
+[node name="decoration8" type="Sprite2D" parent="CanvasLayer/Menu/CanvasLayer/decoration"]
+position = Vector2(189, -18)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+
+[node name="SongSelect" type="Control" parent="CanvasLayer"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/SongSelect"]
+libraries = {
+&"": SubResource("AnimationLibrary_ikxt8")
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/SongSelect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -248.05632
+offset_bottom = -167.72804
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7.210152, 5.1897154)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 1, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/SongSelect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SongSelect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LeftPanel" type="Panel" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_oqrch")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Cover" type="TextureRect" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer"]
+custom_minimum_size = Vector2(78, 78)
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_oqrch")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Preview" type="Control" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/Preview"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/Preview"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SongInfo" type="VBoxContainer" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="SongName" type="Label" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/SongInfo"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 3
+label_settings = ExtResource("10_oqrch")
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+max_lines_visible = 2
+
+[node name="Artist" type="Label" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/SongInfo"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 3
+label_settings = ExtResource("10_oqrch")
+autowrap_mode = 2
+clip_text = true
+
+[node name="Album" type="Label" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/SongInfo"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 3
+label_settings = ExtResource("10_oqrch")
+autowrap_mode = 2
+clip_text = true
+
+[node name="Difficulty" type="Label" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/SongInfo"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 3
+label_settings = ExtResource("10_oqrch")
+autowrap_mode = 2
+clip_text = true
+
+[node name="BPM" type="Label" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/SongInfo"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 3
+label_settings = ExtResource("10_oqrch")
+autowrap_mode = 2
+clip_text = true
+
+[node name="PreviewStatus" type="Label" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/SongInfo"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 3
+label_settings = ExtResource("10_oqrch")
+autowrap_mode = 2
+clip_text = true
+
+[node name="Creator" type="Label" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/LeftPanel/VBoxContainer/SongInfo"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 3
+label_settings = ExtResource("10_oqrch")
+autowrap_mode = 2
+clip_text = true
+
+[node name="RightPanel" type="Panel" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(186, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ydwoj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/RightPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/RightPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/RightPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(38, 18)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_k7gsw")
+text = "▶"
+flat = true
+
+[node name="BackButton" type="Button" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/RightPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(38, 18)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_k7gsw")
+text = "➜]"
+flat = true
+
+[node name="RandomButton" type="Button" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/RightPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(44, 18)
+layout_mode = 2
+text = "🎲"
+flat = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/RightPanel/VBoxContainer"]
+custom_minimum_size = Vector2(180, 90)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/RightPanel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="SongItem" parent="CanvasLayer/SongSelect/MarginContainer/HBoxContainer/RightPanel/VBoxContainer/ScrollContainer/VBoxContainer" instance=ExtResource("10_3y0a6")]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/SongSelect"]
+
+[node name="Linhas" type="Node2D" parent="CanvasLayer"]
+
+[node name="Line2D" type="Line2D" parent="CanvasLayer/Linhas"]
+position = Vector2(198, 184)
+points = PackedVector2Array(0, -14, 0, -120.32706, 0, -153)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D2" type="Line2D" parent="CanvasLayer/Linhas"]
+position = Vector2(160, 184)
+points = PackedVector2Array(0, -14, 0, -153)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D3" type="Line2D" parent="CanvasLayer/Linhas"]
+position = Vector2(239, 184)
+points = PackedVector2Array(0, -14, 0, -153)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D5" type="Line2D" parent="CanvasLayer/Linhas"]
+position = Vector2(282, 184)
+points = PackedVector2Array(0, -14, 0, -153)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D4" type="Line2D" parent="CanvasLayer/Linhas"]
+position = Vector2(119, 184)
+points = PackedVector2Array(0, -14, 0, -153)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Game" type="Node2D" parent="CanvasLayer"]
+
+[node name="notas" type="Node2D" parent="CanvasLayer/Game"]
+z_index = 5
+
+[node name="Notas1" type="Sprite2D" parent="CanvasLayer/Game/notas"]
+position = Vector2(88, 130)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+
+[node name="Notas" type="Sprite2D" parent="CanvasLayer/Game/notas"]
+position = Vector2(24.000004, 68)
+scale = Vector2(1.0378462, 0.9141493)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+
+[node name="Notas2" type="Sprite2D" parent="CanvasLayer/Game/notas"]
+z_index = 1
+position = Vector2(81, 54)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+
+[node name="Notas3" type="Sprite2D" parent="CanvasLayer/Game/notas"]
+position = Vector2(105, 83)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+
+[node name="Notas4" type="Sprite2D" parent="CanvasLayer/Game/notas"]
+position = Vector2(30, 114)
+texture = ExtResource("1_qtqwq")
+hframes = 3
+
+[node name="setasVazias" type="Node2D" parent="CanvasLayer/Game"]
+
+[node name="SetaWvazia" type="Sprite2D" parent="CanvasLayer/Game/setasVazias"]
+position = Vector2(179, 181)
+scale = Vector2(2, 1.977)
+texture = ExtResource("3_a4qnd")
+
+[node name="SetaAvazia" type="Sprite2D" parent="CanvasLayer/Game/setasVazias"]
+position = Vector2(139, 181)
+rotation = 1.5707964
+scale = Vector2(2, 1.849)
+texture = ExtResource("3_a4qnd")
+flip_v = true
+
+[node name="SetaSvazia" type="Sprite2D" parent="CanvasLayer/Game/setasVazias"]
+position = Vector2(218, 181)
+scale = Vector2(2, 1.902)
+texture = ExtResource("3_a4qnd")
+flip_v = true
+
+[node name="SetaDvazia" type="Sprite2D" parent="CanvasLayer/Game/setasVazias"]
+position = Vector2(261, 181)
+rotation = 1.5707964
+scale = Vector2(2, 1.955)
+texture = ExtResource("3_a4qnd")
+
+[node name="setas" type="Node2D" parent="CanvasLayer/Game"]
+
+[node name="SetaA" type="Sprite2D" parent="CanvasLayer/Game/setas"]
+position = Vector2(141.23999, 24.75)
+scale = Vector2(2, 1.939)
+texture = ExtResource("4_ixe4k")
+hframes = 2
+script = ExtResource("5_ixe4k")
+
+[node name="SetaW" type="Sprite2D" parent="CanvasLayer/Game/setas"]
+position = Vector2(179, 22)
+scale = Vector2(2, 1.785)
+texture = ExtResource("5_4foiy")
+hframes = 2
+script = ExtResource("5_ixe4k")
+
+[node name="SetaS" type="Sprite2D" parent="CanvasLayer/Game/setas"]
+position = Vector2(218, 24.25)
+scale = Vector2(2, 1.844)
+texture = ExtResource("6_qx7tt")
+hframes = 2
+script = ExtResource("5_ixe4k")
+
+[node name="SetaD" type="Sprite2D" parent="CanvasLayer/Game/setas"]
+position = Vector2(261, 26)
+scale = Vector2(2, 2.031)
+texture = ExtResource("7_vcghe")
+hframes = 2
+script = ExtResource("5_ixe4k")
+
+[node name="Score" type="RichTextLabel" parent="CanvasLayer/Game"]
+offset_top = -1.0
+offset_right = 107.0
+offset_bottom = 21.0
+theme = ExtResource("8_v1mcy")
+theme_override_fonts/normal_font = ExtResource("9_k7gsw")
+horizontal_alignment = 1
+
+[node name="Combo" type="RichTextLabel" parent="CanvasLayer/Game"]
+offset_left = 75.0
+offset_top = 21.0
+offset_right = 104.0
+offset_bottom = 46.0
+theme_override_fonts/normal_font = ExtResource("9_k7gsw")
+
+[node name="effects" type="Node2D" parent="CanvasLayer/Game"]
+
+[node name="effectsAzul" type="Sprite2D" parent="CanvasLayer/Game/effects"]
+position = Vector2(219, 153)
+texture = ExtResource("12_4foiy")
+hframes = 4
+
+[node name="effectsVermelho" type="Sprite2D" parent="CanvasLayer/Game/effects"]
+position = Vector2(141.24, 151)
+texture = ExtResource("12_4foiy")
+hframes = 4
+
+[node name="effectsAmarelo" type="Sprite2D" parent="CanvasLayer/Game/effects"]
+position = Vector2(179, 152)
+texture = ExtResource("12_4foiy")
+hframes = 4
+
+[node name="effectsVerde" type="Sprite2D" parent="CanvasLayer/Game/effects"]
+position = Vector2(261, 158)
+texture = ExtResource("12_4foiy")
+hframes = 4
+
+[node name="vidas" type="Node2D" parent="CanvasLayer/Game"]
+position = Vector2(30, 184)
+
+[node name="vida" type="Sprite2D" parent="CanvasLayer/Game/vidas"]
+position = Vector2(6, -1.5)
+scale = Vector2(1.1875, 1.15625)
+texture = ExtResource("17_mc68l")
+hframes = 3
+
+[node name="vida2" type="Sprite2D" parent="CanvasLayer/Game/vidas"]
+position = Vector2(36, -1.5)
+scale = Vector2(1.1875, 1.15625)
+texture = ExtResource("17_mc68l")
+hframes = 3
+
+[node name="vida3" type="Sprite2D" parent="CanvasLayer/Game/vidas"]
+position = Vector2(66, -1.5)
+scale = Vector2(1.118, 1.149)
+texture = ExtResource("17_mc68l")
+hframes = 3
+
+[node name="spawnadas" type="Node2D" parent="CanvasLayer/Game"]
+
+[node name="Resultado" parent="CanvasLayer" instance=ExtResource("20_ydwoj")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Controllers" type="Node2D" parent="."]
+
+[node name="BeatmapController" parent="Controllers" instance=ExtResource("18_w53p1")]
+beatmap_path = "res://beatmaps/dois_amores_duas_paixões.json"
+
+[node name="UIController" parent="Controllers" instance=ExtResource("19_3y0a6")]
+
+[node name="ArrowController" type="Node2D" parent="Controllers"]
+script = ExtResource("20_ixwo4")
+
+[node name="ScoreController" type="Node2D" parent="Controllers"]
+script = ExtResource("21_oqrch")
+
+[node name="LifeController" type="Node2D" parent="Controllers"]
+script = ExtResource("22_ydwoj")
+
+[node name="EffectController" type="Node2D" parent="Controllers"]
+script = ExtResource("23_t4tg0")
+
+[node name="DecorationController" type="Node2D" parent="Controllers"]
+script = ExtResource("24_ikxt8")
+
+[node name="GameStateController" type="Node2D" parent="Controllers"]
+script = ExtResource("25_lqil2")
+
+[node name="SongSelectController" type="Node2D" parent="Controllers"]
+script = ExtResource("27_ixwo4")
+
+[node name="ResultController" type="Node2D" parent="Controllers"]
+script = ExtResource("30_t4tg0")
+
+[node name="SoundTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_ikxt8")
+volume_db = -2.0
+parameters/looping = true

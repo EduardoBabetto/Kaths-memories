@@ -1,0 +1,11 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cjer065pvmf30"]
+
+[ext_resource type="FontFile" uid="uid://duw11mipxkaeh" path="res://scenes/ui/Pixel Digivolve.otf" id="1_poks5"]
+
+[resource]
+font = ExtResource("1_poks5")
+font_size = 6
+font_color = Color(0.57396513, 0.025840001, 0.94952685, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.448)

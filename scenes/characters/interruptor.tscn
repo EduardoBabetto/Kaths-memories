@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://co38t0hxh568o"]
+
+[ext_resource type="Script" uid="uid://b2p6j6jg4bw1s" path="res://scripts/interruptor.gd" id="1_kf2tp"]
+[ext_resource type="Texture2D" uid="uid://cr272akh6lpc7" path="res://sprites/Kath game/Interruptor-1.png.png" id="2_44457"]
+[ext_resource type="AudioStream" uid="uid://cta8htultsirl" path="res://audio/SFX/interruptor.MP3" id="3_1114c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_44457"]
+
+[node name="interruptor" type="Node2D"]
+script = ExtResource("1_kf2tp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_44457")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_44457")
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1114c")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

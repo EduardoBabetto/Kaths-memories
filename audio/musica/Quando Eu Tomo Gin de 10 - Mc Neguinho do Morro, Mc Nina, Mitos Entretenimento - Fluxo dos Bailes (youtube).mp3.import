@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1vrt6yautcf8"
+path="res://.godot/imported/Quando Eu Tomo Gin de 10 - Mc Neguinho do Morro, Mc Nina, Mitos Entretenimento - Fluxo dos Bailes (youtube).mp3-26f0ea07395349a081df3f627e1ab0c9.mp3str"
+
+[deps]
+
+source_file="res://audio/musica/Quando Eu Tomo Gin de 10 - Mc Neguinho do Morro, Mc Nina, Mitos Entretenimento - Fluxo dos Bailes (youtube).mp3"
+dest_files=["res://.godot/imported/Quando Eu Tomo Gin de 10 - Mc Neguinho do Morro, Mc Nina, Mitos Entretenimento - Fluxo dos Bailes (youtube).mp3-26f0ea07395349a081df3f627e1ab0c9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

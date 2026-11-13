@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xicaqjsj28mv"
+path="res://.godot/imported/music.mp3-77a121344ea810425ef043c4dec42090.mp3str"
+
+[deps]
+
+source_file="res://beatmaps/choque no cu/music.mp3"
+dest_files=["res://.godot/imported/music.mp3-77a121344ea810425ef043c4dec42090.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

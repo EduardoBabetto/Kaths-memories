@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bc4s4p6lhbpiv"
+path="res://.godot/imported/VMZ -  O Pequeno Príncipe Feat. Carol Valença - VMZ (youtube).mp3-dcd5895b5542a4ee4fde193da54d6da5.mp3str"
+
+[deps]
+
+source_file="res://audio/musica/VMZ -  O Pequeno Príncipe Feat. Carol Valença - VMZ (youtube).mp3"
+dest_files=["res://.godot/imported/VMZ -  O Pequeno Príncipe Feat. Carol Valença - VMZ (youtube).mp3-dcd5895b5542a4ee4fde193da54d6da5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

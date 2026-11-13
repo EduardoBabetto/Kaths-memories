@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://ba5fpev6jjrdb"]
+
+[ext_resource type="Script" uid="uid://d1senljxs43l" path="res://scripts/labuziggs.gd" id="1_a7r2a"]
+[ext_resource type="Texture2D" uid="uid://cp22d7c05ujj6" path="res://sprites/Kath game/personagens/Labuziggs.png" id="1_rsnfb"]
+[ext_resource type="AudioStream" uid="uid://dr7jdhsyv5mhd" path="res://audio/SFX/Ziggs.MP3" id="3_1cmk5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c10lw"]
+atlas = ExtResource("1_rsnfb")
+region = Rect2(0, 0, 23, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7r2a"]
+atlas = ExtResource("1_rsnfb")
+region = Rect2(23, 0, 23, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cmk5"]
+atlas = ExtResource("1_rsnfb")
+region = Rect2(46, 0, 23, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4j8h"]
+atlas = ExtResource("1_rsnfb")
+region = Rect2(69, 0, 23, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_beoul"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c10lw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7r2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cmk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4j8h")
+}],
+"loop": true,
+"name": &"isqueiro",
+"speed": 5.0
+}]
+
+[node name="Labuziggs" type="Node2D"]
+script = ExtResource("1_a7r2a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_beoul")
+animation = &"isqueiro"
+autoplay = "default"
+
+[node name="Ziggs" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1cmk5")

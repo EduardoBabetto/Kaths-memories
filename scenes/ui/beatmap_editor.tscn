@@ -1,0 +1,179 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx0w613k5g01s"]
+
+[ext_resource type="Script" uid="uid://cdu2x123dmy32" path="res://scripts/AudioScripts/beatmap_editor.gd" id="1_c10vl"]
+[ext_resource type="AudioStream" uid="uid://3goiqlaiaobw" path="res://audio/musica/MC Pikachu - Choque no cu (Mano DJ) Lançamento 2015 - Audio Oficial.mp3" id="2_ow52p"]
+
+[node name="BeatmapEditor" type="Node2D"]
+script = ExtResource("1_c10vl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ow52p")
+volume_db = -13.358
+
+[node name="FileDialog" type="FileDialog" parent="."]
+oversampling_override = 1.0
+mode = 3
+title = "Open a File"
+file_mode = 0
+filters = PackedStringArray("*.mp3", "*.ogg", "*.wav")
+
+[node name="CoverDialog" type="FileDialog" parent="."]
+oversampling_override = 1.0
+mode = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Musicas" type="Node2D" parent="CanvasLayer/VBoxContainer"]
+
+[node name="Nome" type="LineEdit" parent="CanvasLayer/VBoxContainer/Musicas"]
+offset_left = 218.0
+offset_top = 1.0
+offset_right = 286.5625
+offset_bottom = 32.0
+
+[node name="Artista" type="LineEdit" parent="CanvasLayer/VBoxContainer/Musicas"]
+offset_left = 218.0
+offset_top = 30.0
+offset_right = 286.5625
+offset_bottom = 61.0
+
+[node name="Dificuldade" type="OptionButton" parent="CanvasLayer/VBoxContainer/Musicas"]
+offset_left = 127.0
+offset_top = 1.0
+offset_right = 218.0
+offset_bottom = 32.0
+item_count = 3
+popup/item_0/text = "Normal"
+popup/item_0/id = 0
+popup/item_1/text = "Medio"
+popup/item_1/id = 1
+popup/item_2/text = "Difiicil"
+popup/item_2/id = 2
+
+[node name="Album" type="LineEdit" parent="CanvasLayer/VBoxContainer/Musicas"]
+offset_left = 218.0
+offset_top = 61.0
+offset_right = 286.5625
+offset_bottom = 92.0
+
+[node name="Creator" type="LineEdit" parent="CanvasLayer/VBoxContainer/Musicas"]
+offset_left = 218.0
+offset_top = 90.0
+offset_right = 286.5625
+offset_bottom = 121.0
+
+[node name="Version" type="LineEdit" parent="CanvasLayer/VBoxContainer/Musicas"]
+offset_left = 149.0
+offset_top = 31.0
+offset_right = 217.5625
+offset_bottom = 62.0
+
+[node name="Config" type="Node2D" parent="CanvasLayer/VBoxContainer"]
+
+[node name="Multiplicador" type="SpinBox" parent="CanvasLayer/VBoxContainer/Config"]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 87.5625
+offset_bottom = 30.0
+
+[node name="BPM" type="SpinBox" parent="CanvasLayer/VBoxContainer/Config"]
+offset_left = 1.0
+offset_top = 30.0
+offset_right = 87.5625
+offset_bottom = 61.0
+max_value = 1000.0
+
+[node name="Offset" type="SpinBox" parent="CanvasLayer/VBoxContainer/Config"]
+offset_left = 1.0
+offset_top = 58.0
+offset_right = 87.5625
+offset_bottom = 89.0
+
+[node name="TempoQueda" type="SpinBox" parent="CanvasLayer/VBoxContainer/Config"]
+offset_left = 2.0
+offset_top = 88.0
+offset_right = 88.5625
+offset_bottom = 119.0
+max_value = 999.0
+
+[node name="Velocidade" type="SpinBox" parent="CanvasLayer/VBoxContainer/Config"]
+offset_left = 1.0
+offset_top = 119.0
+offset_right = 87.5625
+offset_bottom = 150.0
+max_value = 999.0
+
+[node name="Audio" type="Node2D" parent="CanvasLayer/VBoxContainer"]
+
+[node name="LabelMusica" type="Label" parent="CanvasLayer/VBoxContainer/Audio"]
+offset_left = 143.0
+offset_top = 109.0
+offset_right = 183.0
+offset_bottom = 132.0
+
+[node name="Play" type="Button" parent="CanvasLayer/VBoxContainer/Audio"]
+offset_left = 185.0
+offset_top = 146.0
+offset_right = 226.0
+offset_bottom = 177.0
+text = "Play"
+
+[node name="Pause" type="Button" parent="CanvasLayer/VBoxContainer/Audio"]
+offset_left = 229.0
+offset_top = 145.0
+offset_right = 284.0
+offset_bottom = 176.0
+text = "Pause"
+
+[node name="mp3" type="Button" parent="CanvasLayer/VBoxContainer/Audio"]
+offset_left = 240.0
+offset_top = 176.0
+offset_right = 282.0
+offset_bottom = 207.0
+text = "MP3"
+
+[node name="Beatmap" type="Node2D" parent="CanvasLayer/VBoxContainer"]
+
+[node name="QuantidadeNotas" type="Label" parent="CanvasLayer/VBoxContainer/Beatmap"]
+offset_left = 1.0
+offset_top = 155.0
+offset_right = 41.0
+offset_bottom = 178.0
+
+[node name="LabelTempo" type="Label" parent="CanvasLayer/VBoxContainer/Beatmap"]
+offset_left = 1.0
+offset_top = 176.0
+offset_right = 41.0
+offset_bottom = 199.0
+
+[node name="LabelStatus" type="Label" parent="CanvasLayer/VBoxContainer/Beatmap"]
+offset_left = 246.0
+offset_top = 64.0
+offset_right = 286.0
+offset_bottom = 87.0
+
+[node name="ButtonLimpar" type="Button" parent="CanvasLayer/VBoxContainer/Beatmap"]
+offset_left = 154.0
+offset_top = 62.0
+offset_right = 217.0
+offset_bottom = 93.0
+text = "Limpar"
+
+[node name="Salvar" type="Button" parent="CanvasLayer/VBoxContainer/Beatmap"]
+offset_left = 127.0
+offset_top = 146.0
+offset_right = 183.0
+offset_bottom = 177.0
+text = "Salvar
+"
+
+[node name="CoverSelect" type="Button" parent="CanvasLayer/VBoxContainer/Beatmap"]
+offset_left = 124.0
+offset_top = 177.0
+offset_right = 177.0
+offset_bottom = 208.0
+text = "Cover"

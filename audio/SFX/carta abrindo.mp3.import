@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcm7s8ahb1hk"
+path="res://.godot/imported/carta abrindo.mp3-a14a61b58780badee49d6104fb7135dc.mp3str"
+
+[deps]
+
+source_file="res://audio/SFX/carta abrindo.mp3"
+dest_files=["res://.godot/imported/carta abrindo.mp3-a14a61b58780badee49d6104fb7135dc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

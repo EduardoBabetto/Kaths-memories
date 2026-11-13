@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckauvei3fcyit"]
+
+[ext_resource type="Script" uid="uid://dax4qqctbyj1w" path="res://scripts/BaixoGame/controllers/BeatmapController.gd" id="1_pt6l4"]
+
+[node name="BeatmapController" type="Node2D"]
+script = ExtResource("1_pt6l4")
