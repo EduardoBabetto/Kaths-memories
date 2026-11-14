@@ -250,6 +250,19 @@ git push origin minha-feature
 ```
 
 ---
+## ⬇️ Download do jogo
+
+Você pode baixar a versão jogável de **Kath's Memories** diretamente pela página de Releases do GitHub.
+
+1. Acesse a página de [Releases](https://github.com/EduardoBabetto/Kaths-memories/releases).
+2. Localize a versão mais recente do jogo.
+3. Baixe o arquivo `.zip` disponibilizado nos anexos.
+4. Extraia os arquivos para uma pasta.
+5. Execute `Kath's Memories.exe` para iniciar o jogo.
+
+**Observação:** mantenha o arquivo `.pck` na mesma pasta do executável para garantir o funcionamento correto do jogo.
+
+Não é necessário instalar a Godot Engine para jogar a versão exportada.
 
 ## 📚 Documentação oficial
 
