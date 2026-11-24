@@ -8,6 +8,7 @@
 ### Integrantes
 - EDUARDO DOS SANTOS BABETTO – RA: 826181547
 - David Gabriel Sousa Mudesto  – RA: 823158549
+- Arthur Novais dos Santos  – RA: 82616664
 - Felipe Toffetti - RA: 82610205
 
 ## 📖 Sobre o projeto
