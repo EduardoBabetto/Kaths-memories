@@ -1,5 +1,15 @@
 # 🎮 Kath's Memories
 
+## 1. Identificação
+- Jogo: Kath's Memories
+- Disciplina: Usabilidade, Desenvolvimento Web, Mobile e Jogos
+- Professor: Fabio Tadeu Doro
+
+### Integrantes
+- EDUARDO DOS SANTOS BABETTO – RA: 826181547
+- David Gabriel Sousa Mudesto  – RA: 823158549
+- Felipe Toffetti - RA: 82610205
+
 ## 📖 Sobre o projeto
 
 **Kath's Memories** é um jogo 2D desenvolvido utilizando a Godot Engine, com GDScript.
